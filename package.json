@@ -9,7 +9,8 @@
   "author": "EvilFactory",
   "license": "ISC",
   "dependencies": {
-    "cleverbot-free": "^1.0.3",
-    "omegle-node": "^1.1.4"
+    "md5": "^2.2.1",
+    "omegle-node": "^1.1.4",
+    "superagent": "^5.2.2"
   }
 }
