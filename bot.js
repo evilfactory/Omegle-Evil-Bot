@@ -1,8 +1,12 @@
 var Omegle = require('omegle-node');
-var om = new Omegle(); 
- 
+var om = new Omegle();
+
+const readline = require('readline');
+
 const superagent = require("superagent");
 const md5 = require("md5");
+
+var evilbot=true
 
 let cookies;
 
@@ -29,46 +33,81 @@ var cleverbot = async (stimulus, context = []) => {
     payload += md5(payload.substring(7, 33));
 
     const req = await superagent.post("https://www.cleverbot.com/webservicemin?uc=UseOfficialCleverbotAPI")
-    .set("Cookie", cookies)
-    .type("text/plain")
-    .send(payload);
+        .set("Cookie", cookies)
+        .type("text/plain")
+        .send(payload);
 
     return decodeURIComponent(req.header["cboutput"]);
 };
 
-om.on('omerror',function(err){
+om.on('omerror', function (err) {
     console.log('error: ' + err);
+
+    om.connect();
 });
- 
-om.on('gotID',function(id){
+
+om.on('gotID', function (id) {
     console.log('connected to the server as: ' + id);
 });
-om.on('waiting', function(){
+om.on('waiting', function () {
     console.log('waiting for a stranger.');
 });
- 
-om.on('connected',function(){
+
+om.on('connected', function () {
     console.log('connected');
 });
- 
+
 var context = []
 
-om.on('gotMessage',function(msg){
+om.on('gotMessage', function (msg) {
     console.log('Stranger: ' + msg);
-     
+
     context.push(msg)
 
     cleverbot(msg, context).then(response => {
-	console.log(" EvilBot: "+response)
-        om.send(response)
+        if(evilbot){
+        console.log(" EvilBot: " + response)
+        om.startTyping()
+        setTimeout(() => {
+            om.send(response)
+            om.stopTyping()
+        }, msg.length * 20);
+        }
 
-	context.push(response)
+        context.push(response)
     });
- 
+
 });
- 
-om.on('strangerDisconnected',function(){
+
+om.on('strangerDisconnected', function () {
     console.log('stranger disconnected.');
 });
- 
+
 om.connect();
+
+
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.on('line', (answer) => {
+
+    var nice = answer.split(" ")
+    var he = nice.shift()
+
+    if(he == "start"){
+        evilbot=true
+    }
+    if(he == "stop"){
+        evilbot=false
+    }
+    if(he == "say"){
+        
+        om.send(nice.join(" "))
+        console.log("you: "+nice.join(" "))
+    }
+
+    //rl.close();
+});
