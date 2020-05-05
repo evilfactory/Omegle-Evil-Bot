@@ -59,7 +59,7 @@ var cleverbot = async (stimulus, context = []) => {
 om.on('omerror', function (err) {
     console.log("\x1b[33m",'error: ' + err,"\x1b[37m");
 
-    om.connect();
+    //om.connect();
 });
 
 om.on('gotID', function (id) {
@@ -163,7 +163,7 @@ rl.on('line', (answer) => {
         if(om.connected()){
             om.disconnect()
         }
-
+        context = []
         converso = ""
 
         om.connect()
