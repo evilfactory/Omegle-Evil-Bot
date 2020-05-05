@@ -159,7 +159,10 @@ rl.on('line', (answer) => {
         console.log("\x1b[36m","context clear","\x1b[37m")
     }
     if(he == "next"){
-        om.disconnect()
+        if(om.connected()){
+            om.disconnect()
+        }
+
         om.connect()
     }
 
