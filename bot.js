@@ -1,4 +1,4 @@
-var questionQuestions = false;
+var questionQuestions = true;
 
 
 var Omegle = require('omegle-node');
@@ -81,13 +81,14 @@ om.on('gotMessage', function (msg) {
                 om.send(response)
                 om.stopTyping()
                 console.log(" EvilBot: " + response)
+                context.push(response)
             }
          
 
         }, msg.length * 20);
         }
 
-        context.push(response)
+        
     });
 
 });
@@ -130,6 +131,7 @@ rl.on('line', (answer) => {
         om.stopTyping()
 
         console.log("Evilbot: "+wantSay)
+        context.push(wantSay)
         wantSay=""
     }
     if(he == "n"){
