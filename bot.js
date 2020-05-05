@@ -138,5 +138,14 @@ rl.on('line', (answer) => {
         wantSay=""
     }
 
+    if(he == "clear"){
+        context=[]
+        console.log("context clear")
+    }
+    if(he == "another"){
+        om.disconnect()
+        om.connect()
+    }
+
     //rl.close();
 });
