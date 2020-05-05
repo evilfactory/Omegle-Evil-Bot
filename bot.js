@@ -1,7 +1,8 @@
 var questionQuestions = true;
 
+qs = require('query-string');
 
-var Omegle = require('omegle-node');
+var Omegle = require('./omeglebot.js');
 var om = new Omegle();
 
 const readline = require('readline');
@@ -14,6 +15,12 @@ var evilbot=true
 var wantSay=""
 
 let cookies;
+
+function formatMessage(msg){
+    msg = msg.replace("\'", "`")
+    //msg = msg.replace("\'", "`")
+    return msg
+}
 
 var cleverbot = async (stimulus, context = []) => {
     if (cookies == null) {
@@ -65,6 +72,8 @@ om.on('connected', function () {
 var context = []
 
 om.on('gotMessage', function (msg) {
+    msg = formatMessage(msg)
+
     console.log("\x1b[32m",'Stranger: ' + msg,"\x1b[37m");
 
     context.push(msg)
@@ -85,7 +94,7 @@ om.on('gotMessage', function (msg) {
             }
          
 
-        }, msg.length * 20);
+        }, response.length * 100);
         }
 
         
@@ -145,6 +154,15 @@ rl.on('line', (answer) => {
     if(he == "next"){
         om.disconnect()
         om.connect()
+    }
+
+    if(he == "dontquestion"){
+        console.log("\x1b[36m","done","\x1b[37m")
+        questionQuestions=false
+    }
+    if(he == "question"){
+        console.log("\x1b[36m","done","\x1b[37m")
+        questionQuestions=true
     }
 
     //rl.close();
