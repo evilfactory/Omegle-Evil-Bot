@@ -110,6 +110,7 @@ om.on('gotMessage', function (msg) {
 
 om.on('strangerDisconnected', function () {
     console.log("\x1b[33m",'stranger disconnected.',"\x1b[37m");
+    converso = converso + "Stranger disconnected. \n"
 });
 
 om.connect();
@@ -162,6 +163,8 @@ rl.on('line', (answer) => {
         if(om.connected()){
             om.disconnect()
         }
+
+        converso = ""
 
         om.connect()
     }
