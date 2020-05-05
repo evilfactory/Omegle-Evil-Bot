@@ -1,3 +1,6 @@
+var questionQuestions = false;
+
+
 var Omegle = require('omegle-node');
 var om = new Omegle();
 
@@ -7,6 +10,8 @@ const superagent = require("superagent");
 const md5 = require("md5");
 
 var evilbot=true
+
+var wantSay=""
 
 let cookies;
 
@@ -66,11 +71,19 @@ om.on('gotMessage', function (msg) {
 
     cleverbot(msg, context).then(response => {
         if(evilbot){
-        console.log(" EvilBot: " + response)
+        
         om.startTyping()
         setTimeout(() => {
-            om.send(response)
-            om.stopTyping()
+            if(questionQuestions){
+                console.log(" EvilBot wants to say: " + response+" (Y/N)")
+                wantSay=response
+            }else{
+                om.send(response)
+                om.stopTyping()
+                console.log(" EvilBot: " + response)
+            }
+         
+
         }, msg.length * 20);
         }
 
@@ -95,7 +108,7 @@ const rl = readline.createInterface({
 rl.on('line', (answer) => {
 
     var nice = answer.split(" ")
-    var he = nice.shift()
+    var he = nice.shift().toLowerCase()
 
     if(he == "start"){
         evilbot=true
@@ -107,6 +120,20 @@ rl.on('line', (answer) => {
         
         om.send(nice.join(" "))
         console.log("you: "+nice.join(" "))
+    }
+
+    if(he == "y"){
+        if(wantSay == ""){
+            return
+        }
+        om.send(wantSay)
+        om.stopTyping()
+
+        console.log("Evilbot: "+wantSay)
+        wantSay=""
+    }
+    if(he == "n"){
+        wantSay=""
     }
 
     //rl.close();
