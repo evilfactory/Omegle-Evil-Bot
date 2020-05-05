@@ -46,7 +46,7 @@ var cleverbot = async (stimulus, context = []) => {
 };
 
 om.on('omerror', function (err) {
-    console.log('error: ' + err);
+    console.log("\x1b[33m",'error: ' + err,"\x1b[37m");
 
     om.connect();
 });
@@ -65,7 +65,7 @@ om.on('connected', function () {
 var context = []
 
 om.on('gotMessage', function (msg) {
-    console.log('Stranger: ' + msg);
+    console.log("\x1b[32m",'Stranger: ' + msg,"\x1b[37m");
 
     context.push(msg)
 
@@ -75,12 +75,12 @@ om.on('gotMessage', function (msg) {
         om.startTyping()
         setTimeout(() => {
             if(questionQuestions){
-                console.log(" EvilBot wants to say: " + response+" (Y/N)")
+                console.log("\x1b[31m","EvilBot wants to say: " + response+" (Y/N)","\x1b[37m")
                 wantSay=response
             }else{
                 om.send(response)
                 om.stopTyping()
-                console.log(" EvilBot: " + response)
+                console.log("\x1b[35m","EvilBot: " + response,"\x1b[37m")
                 context.push(response)
             }
          
@@ -94,7 +94,7 @@ om.on('gotMessage', function (msg) {
 });
 
 om.on('strangerDisconnected', function () {
-    console.log('stranger disconnected.');
+    console.log("\x1b[33m",'stranger disconnected.',"\x1b[37m");
 });
 
 om.connect();
@@ -120,7 +120,7 @@ rl.on('line', (answer) => {
     if(he == "say"){
         
         om.send(nice.join(" "))
-        console.log("you: "+nice.join(" "))
+        console.log("\x1b[36m","you: "+nice.join(" "),"\x1b[37m")
     }
 
     if(he == "y"){
@@ -130,7 +130,7 @@ rl.on('line', (answer) => {
         om.send(wantSay)
         om.stopTyping()
 
-        console.log("Evilbot: "+wantSay)
+        console.log("\x1b[35m","Evilbot: "+wantSay,"\x1b[37m")
         context.push(wantSay)
         wantSay=""
     }
@@ -140,9 +140,9 @@ rl.on('line', (answer) => {
 
     if(he == "clear"){
         context=[]
-        console.log("context clear")
+        console.log("\x1b[36m","context clear","\x1b[37m")
     }
-    if(he == "another"){
+    if(he == "next"){
         om.disconnect()
         om.connect()
     }
