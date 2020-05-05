@@ -1,0 +1,15 @@
+{
+  "name": "omeglebot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "EvilFactory",
+  "license": "ISC",
+  "dependencies": {
+    "cleverbot-free": "^1.0.3",
+    "omegle-node": "^1.1.4"
+  }
+}
