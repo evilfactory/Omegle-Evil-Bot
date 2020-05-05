@@ -1,5 +1,7 @@
 var questionQuestions = true;
 
+fs = require('fs');
+
 qs = require('query-string');
 
 var Omegle = require('./omeglebot.js');
@@ -11,6 +13,8 @@ const superagent = require("superagent");
 const md5 = require("md5");
 
 var evilbot=true
+
+var converso = ""
 
 var wantSay=""
 
@@ -77,6 +81,7 @@ om.on('gotMessage', function (msg) {
     console.log("\x1b[32m",'Stranger: ' + msg,"\x1b[37m");
 
     context.push(msg)
+    converso = converso + "Stranger: "+msg + "\n"
 
     cleverbot(msg, context).then(response => {
         if(evilbot){
@@ -90,6 +95,7 @@ om.on('gotMessage', function (msg) {
                 om.send(response)
                 om.stopTyping()
                 console.log("\x1b[35m","EvilBot: " + response,"\x1b[37m")
+                converso = converso + "Evilbot: "+response+" \n"
                 context.push(response)
             }
          
@@ -129,7 +135,8 @@ rl.on('line', (answer) => {
     if(he == "say"){
         
         om.send(nice.join(" "))
-        console.log("\x1b[36m","you: "+nice.join(" "),"\x1b[37m")
+        console.log("\x1b[36m","You: "+nice.join(" "),"\x1b[37m")
+        converso = converso + "You: "+nice.join(" ") + "\n"
     }
 
     if(he == "y"){
@@ -163,6 +170,14 @@ rl.on('line', (answer) => {
     if(he == "question"){
         console.log("\x1b[36m","done","\x1b[37m")
         questionQuestions=true
+    }
+
+    if(he == "save"){
+
+        fs.writeFile(nice.join(" "), converso, function (err) {
+            if (err) return console.log(err);
+            console.log("\x1b[36m",'Written > '+nice.join(" "));
+        });
     }
 
     //rl.close();
