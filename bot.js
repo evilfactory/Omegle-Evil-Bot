@@ -96,20 +96,6 @@ om.on('waiting', function () {
 om.on('connected', function () {
     consoleInfo("Connected to a stranger", Green)
 
-    sendMessage("Starting system...", 100)
-    consoleInfo("Evilbot: Starting system...", Magenta, 100)
-
-    sendMessage("Done.", 2000)
-    consoleInfo("Evilbot: Done.", Magenta, 2000)
-
-    sendMessage("Checking AI status...", 6000)
-    consoleInfo("Evilbot: Checking AI status.", Magenta, 6000)
-
-    sendMessage("Status: OK", 10000)
-    consoleInfo("Evilbot: Status: OK.", Magenta, 10000)
-
-    sendMessage("Hello world!", 11000)
-    consoleInfo("Evilbot: Hello world!", Magenta, 11000)
 
 });
 
