@@ -113,7 +113,7 @@ om.on('strangerDisconnected', function () {
     converso = converso + "Stranger disconnected. \n"
 });
 
-om.connect();
+om.connect([]);
 
 
 
@@ -147,6 +147,7 @@ rl.on('line', (answer) => {
         om.send(wantSay)
         om.stopTyping()
 
+        converso = converso + "EvilBot: "+nice.join(" ") + "\n"
         console.log("\x1b[35m","Evilbot: "+wantSay,"\x1b[37m")
         context.push(wantSay)
         wantSay=""
@@ -182,7 +183,7 @@ rl.on('line', (answer) => {
 
         fs.writeFile(nice.join(" "), converso, function (err) {
             if (err) return console.log(err);
-            console.log("\x1b[36m",'Written > '+nice.join(" "));
+            console.log("\x1b[36m",'Written > '+nice.join(" "),"\x1b[37m");
         });
     }
 
