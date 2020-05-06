@@ -20,10 +20,34 @@ var wantSay=""
 
 let cookies;
 
+
+var Black = "\x1b[30m"
+var Red = "\x1b[31m"
+var Green = "\x1b[32m"
+var Yellow = "\x1b[33m"
+var Blue = "\x1b[34m"
+var Magenta = "\x1b[35m"
+var Cyan = "\x1b[36m"
+var White = "\x1b[37m"
+
 function formatMessage(msg){
     msg = msg.replace("\'", "`")
     //msg = msg.replace("\'", "`")
     return msg
+}
+
+function sendMessage(msg, delay=0){
+    setTimeout(function(){
+        if(om.connected()){
+            om.send(msg)
+        }
+    }, delay)
+}
+
+function consoleInfo(msg, color=White, delay=0){
+    setTimeout(function(){
+        console.log(color, msg, White)
+    }, delay)
 }
 
 var cleverbot = async (stimulus, context = []) => {
@@ -57,20 +81,36 @@ var cleverbot = async (stimulus, context = []) => {
 };
 
 om.on('omerror', function (err) {
-    console.log("\x1b[33m",'error: ' + err,"\x1b[37m");
+    consoleInfo("Error: "+err, Red)
 
     //om.connect();
 });
 
 om.on('gotID', function (id) {
-    console.log('connected to the server as: ' + id);
+    consoleInfo("Connected to the server as: "+id)
 });
 om.on('waiting', function () {
-    console.log('waiting for a stranger.');
+    consoleInfo("Waiting for a stranger...")
 });
 
 om.on('connected', function () {
-    console.log('connected');
+    consoleInfo("Connected to a stranger", Green)
+
+    sendMessage("Starting system...", 100)
+    consoleInfo("Evilbot: Starting system...", Magenta, 100)
+
+    sendMessage("Done.", 2000)
+    consoleInfo("Evilbot: Done.", Magenta, 2000)
+
+    sendMessage("Checking AI status...", 6000)
+    consoleInfo("Evilbot: Checking AI status.", Magenta, 6000)
+
+    sendMessage("Status: OK", 10000)
+    consoleInfo("Evilbot: Status: OK.", Magenta, 10000)
+
+    sendMessage("Hello world!", 11000)
+    consoleInfo("Evilbot: Hello world!", Magenta, 11000)
+
 });
 
 var context = []
@@ -78,7 +118,7 @@ var context = []
 om.on('gotMessage', function (msg) {
     msg = formatMessage(msg)
 
-    console.log("\x1b[32m",'Stranger: ' + msg,"\x1b[37m");
+    consoleInfo("Stranger: "+msg, Green)
 
     context.push(msg)
     converso = converso + "Stranger: "+msg + "\n"
@@ -89,12 +129,13 @@ om.on('gotMessage', function (msg) {
         om.startTyping()
         setTimeout(() => {
             if(questionQuestions){
-                console.log("\x1b[31m","EvilBot wants to say: " + response+" (Y/N)","\x1b[37m")
+                consoleInfo("Evilbot wants to say: "+response+" (Y/N)", Red)
                 wantSay=response
             }else{
-                om.send(response)
+                sendMessage(response)
                 om.stopTyping()
-                console.log("\x1b[35m","EvilBot: " + response,"\x1b[37m")
+                consoleInfo("Evilbot: "+response, Magenta)
+
                 converso = converso + "Evilbot: "+response+" \n"
                 context.push(response)
             }
@@ -135,8 +176,8 @@ rl.on('line', (answer) => {
     }
     if(he == "say"){
         
-        om.send(nice.join(" "))
-        console.log("\x1b[36m","You: "+nice.join(" "),"\x1b[37m")
+        sendMessage(nice.join(" "))
+        consoleInfo("You: "+nice.join(" "), Cyan)
         converso = converso + "You: "+nice.join(" ") + "\n"
     }
 
@@ -144,21 +185,22 @@ rl.on('line', (answer) => {
         if(wantSay == ""){
             return
         }
-        om.send(wantSay)
+        sendMessage(wantSay)
         om.stopTyping()
 
-        converso = converso + "EvilBot: "+nice.join(" ") + "\n"
-        console.log("\x1b[35m","Evilbot: "+wantSay,"\x1b[37m")
+        converso = converso + "EvilBot: "+wantSay + "\n"
+        consoleInfo("Evilbot: "+wantSay, Magenta)
         context.push(wantSay)
         wantSay=""
     }
     if(he == "n"){
         wantSay=""
+        om.stopTyping()
     }
 
     if(he == "clear"){
         context=[]
-        console.log("\x1b[36m","context clear","\x1b[37m")
+        consoleInfo("Context clear", Cyan)
     }
     if(he == "next"){
         if(om.connected()){
@@ -171,11 +213,11 @@ rl.on('line', (answer) => {
     }
 
     if(he == "dontquestion"){
-        console.log("\x1b[36m","done","\x1b[37m")
+        consoleInfo("Done", Cyan)
         questionQuestions=false
     }
     if(he == "question"){
-        console.log("\x1b[36m","done","\x1b[37m")
+        consoleInfo("Done", Cyan)
         questionQuestions=true
     }
 
@@ -183,7 +225,7 @@ rl.on('line', (answer) => {
 
         fs.writeFile(nice.join(" "), converso, function (err) {
             if (err) return console.log(err);
-            console.log("\x1b[36m",'Written > '+nice.join(" "),"\x1b[37m");
+            consoleInfo('Written > '+nice.join(" "), Cyan)
         });
     }
 
