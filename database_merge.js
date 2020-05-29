@@ -37,9 +37,11 @@ fs.readFile('./data/database1.json', 'utf8', function (err, data) {
 
         let database3 = merge_array(database1, database2);
 
-        console.log(database3[0].conversation);
+        console.log(database3);
 
-        //TODO: merge databases lol
+        fs.writeFile('./data/database3.json', JSON.stringify(database3), function (err) {
+            if (err) return console.log(err);
+        });
     
     });
 
