@@ -6,18 +6,18 @@ function getRndInteger(min, max) {
 }
 
 
-/*
+
 w2v.loadModel( __dirname + "/../data/vectors.txt", function( err, model ) {
 	console.log( model );
 
-	var string = "eu"
-	var last = "eu"
+	var string = "quantos anos?"
+	var last = "quantos anos?"
 
-	for(var i=0; i < 100; i++){
+	for(var i=0; i < 30; i++){
 		var similar = model.mostSimilar( last, 26 );
 		
 
-		var rnd = getRndInteger(0,25)
+		var rnd = getRndInteger(0,10)
 
 		string = string + " " + similar[rnd].word
 		last = similar[rnd].word
@@ -26,8 +26,8 @@ w2v.loadModel( __dirname + "/../data/vectors.txt", function( err, model ) {
 	console.log( string );
 });
 
-*/
 
+/*
 
 fs.readFile('../data/database.json', 'utf8', function (err, data) {
 	if (err) {
@@ -46,3 +46,4 @@ fs.readFile('../data/database.json', 'utf8', function (err, data) {
 	}
 });
 
+*/

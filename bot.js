@@ -299,6 +299,8 @@ register("next", function (args) {
 
 register("language", function (args) {
     om.language = args[0]
+
+    consoleInfo("Language is now " + om.language, Cyan)
 })
 
 
