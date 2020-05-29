@@ -6,7 +6,7 @@ function getRndInteger(min, max) {
 }
 
 
-
+/*
 w2v.loadModel( __dirname + "/../data/vectors.txt", function( err, model ) {
 	console.log( model );
 
@@ -26,9 +26,9 @@ w2v.loadModel( __dirname + "/../data/vectors.txt", function( err, model ) {
 	console.log( string );
 });
 
+*/
 
 
-/*
 fs.readFile('../data/database.json', 'utf8', function (err, data) {
 	if (err) {
 		return console.log(err);
@@ -38,10 +38,11 @@ fs.readFile('../data/database.json', 'utf8', function (err, data) {
 
 	for(var i=0; i < database.length; i++){
 		
-		if(database[i].date == "1590729928454"){
-			console.log(database[i].conversation)
+		if(database[i].date == "1590740515716"){
+			for(var j=0; j<database[i].conversation.length; j++){
+				console.log(database[i].conversation[j].name+": "+database[i].conversation[j].msg)
+			}
 		}
 	}
 });
 
-*/
