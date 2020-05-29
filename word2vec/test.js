@@ -10,17 +10,18 @@ function getRndInteger(min, max) {
 w2v.loadModel( __dirname + "/../data/vectors.txt", function( err, model ) {
 	console.log( model );
 
-	var string = "quantos anos?"
-	var last = "quantos anos?"
+	var string = "qual seu nome?"
+	//var last = "quantos anos?"
 
 	for(var i=0; i < 30; i++){
-		var similar = model.mostSimilar( last, 26 );
+		var similar = model.mostSimilar( string, 26 );
 		
+		console.log(similar)
 
-		var rnd = getRndInteger(0,10)
+		var rnd = getRndInteger(0,5)
 
 		string = string + " " + similar[rnd].word
-		last = similar[rnd].word
+		//last = similar[rnd].word
 	}
 
 	console.log( string );

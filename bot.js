@@ -145,10 +145,14 @@ function findStranger(){
     clearTimeout(timer)
 
     timer = setTimeout(function(){
-        sendMessage("Timedout, next stranger.")
-        consoleInfo("Evilbot: Timedout, next stranger.", Magenta)
+        if(automatic){
 
-        findStranger()    
+            sendMessage("Timedout, next stranger.")
+            consoleInfo("Evilbot: Timedout, next stranger.", Magenta)
+
+            findStranger()    
+
+        }
     }, conversationTimeout) 
 
     context=[]
@@ -189,10 +193,11 @@ om.on('gotMessage', function (msg) {
     clearTimeout(timer)
 
     timer = setTimeout(function(){
-        findStranger()
-        sendMessage("Timedout, next stranger.")
-        consoleInfo("Evilbot: Timedout, next stranger.", Magenta)
-
+        if(automatic){
+            findStranger()
+            sendMessage("Timedout, next stranger.")
+            consoleInfo("Evilbot: Timedout, next stranger.", Magenta)
+        }
     }, conversationTimeout) 
 
 
