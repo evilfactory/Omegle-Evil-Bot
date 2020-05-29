@@ -16,7 +16,6 @@ w2v.loadModel( __dirname + "/../data/vectors.txt", function( err, model ) {
 	for(var i=0; i < 30; i++){
 		var similar = model.mostSimilar( string, 26 );
 		
-		console.log(similar)
 
 		var rnd = getRndInteger(0,5)
 
@@ -25,6 +24,8 @@ w2v.loadModel( __dirname + "/../data/vectors.txt", function( err, model ) {
 	}
 
 	console.log( string );
+
+	//console.log(model.analogy( 'vc', [ 'nada', 'nada' ], 10 ));
 });
 
 
