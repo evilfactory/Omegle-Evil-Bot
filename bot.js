@@ -1,14 +1,15 @@
+var Omegle = require('./omeglebot.js');
+var om = new Omegle();
+
 var questionQuestions = false;
 var automatic = true // haha machine domination
 var evilbot = true
+om.language = "pt"
 var conversationTimeout = 160000
 
 fs = require('fs');
 
 qs = require('query-string');
-
-var Omegle = require('./omeglebot.js');
-var om = new Omegle();
 
 const readline = require('readline');
 
@@ -22,8 +23,6 @@ var wantSay = ""
 var timer;
 
 let cookies;
-
-om.language = "pt"
 
 var Black = "\x1b[30m"
 var Red = "\x1b[31m"
@@ -297,6 +296,11 @@ register("next", function (args) {
 
     om.connect()
 })
+
+register("language", function (args) {
+    om.language = args[0]
+})
+
 
 register("automatic", function (args) {
     if (args[0] == "0") {
