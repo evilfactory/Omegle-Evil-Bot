@@ -9,6 +9,7 @@
   "author": "EvilFactory",
   "license": "ISC",
   "dependencies": {
+    "fasttext.js": "^1.1.2",
     "md5": "^2.2.1",
     "omegle-node": "^1.1.4",
     "query-string": "^6.12.1",

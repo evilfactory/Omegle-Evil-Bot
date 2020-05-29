@@ -1,0 +1,14 @@
+{
+  "name": "evilbotomegle_convert_data_to_word2vec",
+  "version": "1.0.0",
+  "description": "",
+  "main": "convert.js",
+  "scripts": {
+    "test": "node convert.js"
+  },
+  "author": "EvilFactory",
+  "license": "ISC",
+  "dependencies": {
+    "word2vec": "^1.1.4"
+  }
+}
