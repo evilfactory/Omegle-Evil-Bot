@@ -8,6 +8,9 @@
   },
   "author": "EvilFactory",
   "license": "ISC",
+  "scripts": {
+    "start": "node bot.js"
+  },
   "dependencies": {
     "fasttext.js": "^1.1.2",
     "lodash": "^4.17.15",
