@@ -10,7 +10,7 @@ function getRndInteger(min, max) {
 w2v.loadModel( __dirname + "/../data/vectors.txt", function( err, model ) {
 	console.log( model );
 
-	var string = "qual seu nome?"
+	var string = "ajuda"
 	//var last = "quantos anos?"
 
 	for(var i=0; i < 30; i++){
