@@ -320,6 +320,12 @@ register("automatic", function (args) {
     consoleInfo("Automatic is now " + automatic, Cyan)
 })
 
+register("timeout", function (args) {
+    conversationTimeout = parseInt(args[0])
+
+    consoleInfo("Timeout is now " + conversationTimeout, Cyan)
+})
+
 register("question", function (args) {
     if (args[0] == "0") {
         questionQuestions = false
