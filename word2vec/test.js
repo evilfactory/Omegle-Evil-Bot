@@ -6,6 +6,14 @@ function getRndInteger(min, max) {
 }
 
 
+var Black = "\x1b[30m"
+var Red = "\x1b[31m"
+var Green = "\x1b[32m"
+var Yellow = "\x1b[33m"
+var Blue = "\x1b[34m"
+var Magenta = "\x1b[35m"
+var Cyan = "\x1b[36m"
+var White = "\x1b[37m"
 
 w2v.loadModel( __dirname + "/../data/vectors.txt", function( err, model ) {
 	console.log( model );
@@ -29,7 +37,7 @@ w2v.loadModel( __dirname + "/../data/vectors.txt", function( err, model ) {
 });
 
 
-/*
+
 
 fs.readFile('../data/database.json', 'utf8', function (err, data) {
 	if (err) {
@@ -37,15 +45,35 @@ fs.readFile('../data/database.json', 'utf8', function (err, data) {
 	}
 
 	database = JSON.parse(data)
-
+	
 	for(var i=0; i < database.length; i++){
 		
-		if(database[i].date == "1590740515716"){
+		if(database[i].date == "1590851838420"){
 			for(var j=0; j<database[i].conversation.length; j++){
-				console.log(database[i].conversation[j].name+": "+database[i].conversation[j].msg)
+				if(database[i].conversation[j].name == "Stranger"){
+					console.log(Cyan,database[i].conversation[j].name+": "+database[i].conversation[j].msg)
+				}else{
+					console.log(Green,database[i].conversation[j].name+": "+database[i].conversation[j].msg)
+				}
 			}
 		}
 	}
+	
+
+	/*
+
+	var rnd = getRndInteger(0, database.length-1)
+
+	for(var j=0; j<database[rnd].conversation.length; j++){
+		if(database[rnd].conversation[j].name == "Stranger"){
+			console.log(Cyan,database[rnd].conversation[j].name+": "+database[rnd].conversation[j].msg)
+		}else{
+			console.log(Green,database[rnd].conversation[j].name+": "+database[rnd].conversation[j].msg)
+		}
+	}
+
+	*/
 });
 
-*/
+
+
