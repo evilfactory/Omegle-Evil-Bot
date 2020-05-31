@@ -55,7 +55,7 @@ function loadDatabase() {
 
 
 function saveDatabase() {
-
+    
     fs.writeFile('./data/database.json', JSON.stringify(database), function (err) {
         if (err) return console.log(err);
     });
@@ -63,12 +63,14 @@ function saveDatabase() {
 }
 
 function pushNewConversation(){
+    if(!automatic){return;}
     database.push({date: Date.now().toString(), conversation: []})
 
     saveDatabase()
 }
 
 function pushMessageToDatabase(name, msg){
+    if(!automatic){return;}
     database[database.length-1].conversation.push({name: name, msg: msg})
 
     saveDatabase()
