@@ -169,11 +169,19 @@ om.on('omerror', function (err) {
 });
 
 om.on('gotID', function (id) {
-    consoleInfo("Connected to the server as: " + id)
+    if(id == null){
+        consoleInfo("Planet earth is blue, and you are banned.", Red)
+    }else{
+        consoleInfo("Connected to the server as: " + id)
+    }
 });
 om.on('waiting', function () {
     consoleInfo("Waiting for a stranger...")
 });
+
+om.on('antinudeBanned', function(res){
+    consoleInfo("Planet earth is blue, and you are banned.", Red)
+})
 
 
 om.on('connected', function () {
