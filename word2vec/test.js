@@ -18,7 +18,7 @@ var White = "\x1b[37m"
 w2v.loadModel( __dirname + "/../data/vectors.txt", function( err, model ) {
 	console.log( model );
 
-	var string = "ajuda"
+	var string = "bot"
 	//var last = "quantos anos?"
 
 	for(var i=0; i < 30; i++){
@@ -48,7 +48,7 @@ fs.readFile('../data/database.json', 'utf8', function (err, data) {
 	
 	for(var i=0; i < database.length; i++){
 		
-		if(database[i].date == "1590851838420"){
+		if(database[i].date == "1590789067460"){
 			for(var j=0; j<database[i].conversation.length; j++){
 				if(database[i].conversation[j].name == "Stranger"){
 					console.log(Cyan,database[i].conversation[j].name+": "+database[i].conversation[j].msg)
@@ -60,9 +60,10 @@ fs.readFile('../data/database.json', 'utf8', function (err, data) {
 	}
 	
 
-	/*
+	return;
+	
+	var rnd = returnRandomConversation(10)
 
-	var rnd = getRndInteger(0, database.length-1)
 
 	for(var j=0; j<database[rnd].conversation.length; j++){
 		if(database[rnd].conversation[j].name == "Stranger"){
@@ -72,8 +73,18 @@ fs.readFile('../data/database.json', 'utf8', function (err, data) {
 		}
 	}
 
-	*/
+	
 });
 
+function returnRandomConversation(minLenght){
+	var rnd = getRndInteger(0, database.length-1)
+
+	if(database[rnd].conversation.length < minLenght){
+		console.log(rnd)
+		return returnRandomConversation(minLenght)
+	}else{
+		return rnd
+	}
+}
 
 

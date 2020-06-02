@@ -4,7 +4,8 @@ var om = new Omegle();
 var questionQuestions = false;
 var automatic = true // haha machine domination
 var evilbot = true
-om.language = "pt"
+var databaseName = "database.json"
+//om.language = "pt"
 var conversationTimeout = 160000
 
 fs = require('fs');
@@ -39,7 +40,7 @@ var database = []
 
 function loadDatabase() {
 
-    fs.readFile('./data/database.json', 'utf8', function (err, data) {
+    fs.readFile('./data/'+databaseName, 'utf8', function (err, data) {
         if (err) {
             return console.log(err);
         }
@@ -56,7 +57,7 @@ function loadDatabase() {
 
 function saveDatabase() {
     
-    fs.writeFile('./data/database.json', JSON.stringify(database), function (err) {
+    fs.writeFile('./data/'+databaseName, JSON.stringify(database), function (err) {
         if (err) return console.log(err);
     });
 
@@ -378,4 +379,9 @@ register("y", function (args) {
 register("n", function (args) {
     wantSay = ""
     om.stopTyping()
+})
+
+register("setdatabase", function(args){
+    databaseName = args.join(" ");
+    consoleInfo("Database is now" + databaseName, Cyan)
 })
