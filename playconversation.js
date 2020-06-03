@@ -31,13 +31,15 @@ colors.setTheme({
     silly: 'rainbow',
     info: 'cyan',
     subinfo: 'brightCyan',
-    evilbot: 'magenta',
-    stranger: 'green',
+    evilbot: 'brightMagenta',
+    subevilbot: 'magenta',
+    stranger: 'brightGreen',
+    substranger: 'green',
     error: 'red',
     warn: 'yellow',
     feedback: 'blue',
     question: 'brightMagenta'
-});
+  });
 
 
 function printDatabase() {
@@ -58,9 +60,9 @@ function printDatabase() {
                 for (var j = 0; j < conv.length; j++) {
 
                     if (conv[j].name == "EvilBot") {
-                        consoleInfo("Bot: ".evilbot + conv[j].msg, delay*j)
+                        consoleInfo("Bot: ".evilbot + conv[j].msg.subevilbot, delay*j)
                     } else {
-                        consoleInfo("Stranger: ".stranger + conv[j].msg, delay*j)
+                        consoleInfo("Stranger: ".stranger + conv[j].msg.substranger, delay*j)
                     }
 
                 }

@@ -33,8 +33,10 @@ colors.setTheme({
     silly: 'rainbow',
     info: 'cyan',
     subinfo: 'brightCyan',
-    evilbot: 'magenta',
-    stranger: 'green',
+    evilbot: 'brightMagenta',
+    subevilbot: 'magenta',
+    stranger: 'brightGreen',
+    substranger: 'green',
     error: 'red',
     warn: 'yellow',
     feedback: 'blue',
@@ -200,7 +202,7 @@ om.on('gotMessage', function (msg) {
 
     context.push(msg)
 
-    sendMessageAndLog(msg,"Stranger".stranger, true)
+    sendMessageAndLog(msg.substranger,"Stranger".stranger, true)
     
 
     cleverbot(msg, context).then(response => {
@@ -212,7 +214,7 @@ om.on('gotMessage', function (msg) {
                     sendMessageAndLog(("Evilbot wants to say: " + response + " (Y/N)").question)
                     wantSay = response
                 } else {
-                    sendMessageAndLog(response, "Evilbot".evilbot, true)
+                    sendMessageAndLog(response.subevilbot, "Evilbot".evilbot, true)
 
                     om.stopTyping()
 
@@ -348,7 +350,7 @@ register("y", function (args) {
 
     om.stopTyping()
 
-    sendMessageAndLog(wantSay, "Evilbot".evilbot, true)
+    sendMessageAndLog(wantSay.subevilbot, "Evilbot".evilbot, true)
     context.push(wantSay)
     wantSay = ""
 
