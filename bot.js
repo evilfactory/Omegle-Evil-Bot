@@ -82,14 +82,20 @@ function pushMessageToDatabase(name, msg) {
     saveDatabase()
 }
 
-function sendMessageAndLog(msg, name = "", database=false) {
+function sendMessageAndLog(msg, name = "", database=false, sendtoomegle=false) {
     if (!database) {
         console.log(msg)
+
+        if(sendtoomegle){
+            om.send(colors.strip(msg));
+        }
 
     } else {
         console.log(name + ":" + " " + msg)
 
-        om.send(colors.strip(msg));
+        if(sendtoomegle){
+            om.send(colors.strip(msg));
+        }
 
         pushMessageToDatabase(colors.strip(name), colors.strip(msg))
 
@@ -202,7 +208,7 @@ om.on('gotMessage', function (msg) {
 
     context.push(msg)
 
-    sendMessageAndLog(msg.substranger,"Stranger".stranger, true)
+    sendMessageAndLog(msg.substranger,"Stranger".stranger, true, false)
     
 
     cleverbot(msg, context).then(response => {
@@ -214,7 +220,7 @@ om.on('gotMessage', function (msg) {
                     sendMessageAndLog(("Evilbot wants to say: " + response + " (Y/N)").question)
                     wantSay = response
                 } else {
-                    sendMessageAndLog(response.subevilbot, "Evilbot".evilbot, true)
+                    sendMessageAndLog(response.subevilbot, "Evilbot".evilbot, true,true)
 
                     om.stopTyping()
 
@@ -277,7 +283,7 @@ register("save", function (args) {
 
 register("say", function (args) {
 
-    sendMessageAndLog(args.join(" "), "You".feedback, true)
+    sendMessageAndLog(args.join(" "), "You".feedback, true, true)
     context.push(args.join(" "))
 
 })
@@ -350,7 +356,7 @@ register("y", function (args) {
 
     om.stopTyping()
 
-    sendMessageAndLog(wantSay.subevilbot, "Evilbot".evilbot, true)
+    sendMessageAndLog(wantSay.subevilbot, "Evilbot".evilbot, true, true)
     context.push(wantSay)
     wantSay = ""
 
