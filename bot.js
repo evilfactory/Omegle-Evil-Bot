@@ -1,11 +1,12 @@
 var Omegle = require('./omeglebot.js');
 var om = new Omegle();
+var colors = require('colors');
 
 var questionQuestions = false;
 var automatic = true // haha machine domination
 var evilbot = true
-var databaseName = "database.json"
-//om.language = "pt"
+var databaseName = "fundatabase.json"
+om.language = "pt"
 var conversationTimeout = 160000
 
 fs = require('fs');
@@ -17,30 +18,32 @@ const readline = require('readline');
 const superagent = require("superagent");
 const md5 = require("md5");
 
-var converso = ""
-
 var wantSay = ""
 
 var timer;
 
 let cookies;
 
-var Black = "\x1b[30m"
-var Red = "\x1b[31m"
-var Green = "\x1b[32m"
-var Yellow = "\x1b[33m"
-var Blue = "\x1b[34m"
-var Magenta = "\x1b[35m"
-var Cyan = "\x1b[36m"
-var White = "\x1b[37m"
-
 var commands = [];
 
 var database = []
 
+
+colors.setTheme({
+    silly: 'rainbow',
+    info: 'cyan',
+    subinfo: 'brightCyan',
+    evilbot: 'magenta',
+    stranger: 'green',
+    error: 'red',
+    warn: 'yellow',
+    feedback: 'blue',
+    question: 'brightMagenta'
+  });
+
 function loadDatabase() {
 
-    fs.readFile('./data/'+databaseName, 'utf8', function (err, data) {
+    fs.readFile('./data/' + databaseName, 'utf8', function (err, data) {
         if (err) {
             return console.log(err);
         }
@@ -56,54 +59,44 @@ function loadDatabase() {
 
 
 function saveDatabase() {
-    
-    fs.writeFile('./data/'+databaseName, JSON.stringify(database), function (err) {
+
+    fs.writeFile('./data/' + databaseName, JSON.stringify(database), function (err) {
         if (err) return console.log(err);
     });
 
 }
 
-function pushNewConversation(){
-    if(!automatic){return;}
-    database.push({date: Date.now().toString(), conversation: []})
+function pushNewConversation() {
+    if (!automatic) { return; }
+    database.push({ date: Date.now().toString(), conversation: [] })
 
     saveDatabase()
 }
 
-function pushMessageToDatabase(name, msg){
-    if(!automatic){return;}
-    database[database.length-1].conversation.push({name: name, msg: msg})
+function pushMessageToDatabase(name, msg) {
+    if (!automatic) { return; }
+    database[database.length - 1].conversation.push({ name: name, msg: msg })
 
     saveDatabase()
 }
 
-if(automatic){
-    loadDatabase()
-}else{
-    botReady()
+function sendMessageAndLog(msg, name = "", database=false) {
+    if (!database) {
+        console.log(msg)
+
+    } else {
+        console.log(name + ":" + " " + msg)
+
+        om.send(colors.strip(msg));
+
+        pushMessageToDatabase(colors.strip(name), colors.strip(msg))
+
+    }
 }
 
-function formatMessage(msg) {
-    msg = msg.replace("\'", "`")
-    //msg = msg.replace("\'", "`")
-    return msg
-}
+loadDatabase()
 
-function sendMessage(msg, delay = 0) {
-    setTimeout(function () {
-        if (om.connected()) {
-            om.send(msg)
-        }
-    }, delay)
-}
-
-function consoleInfo(msg, color = White, delay = 0, connectedonly = false) {
-    setTimeout(function () {
-        if (om.connected() || connectedonly == false) {
-            console.log(color, msg, White)
-        }
-    }, delay)
-}
+// FROM https://github.com/IntriguingTiles/cleverbot-free
 
 var cleverbot = async (stimulus, context = []) => {
     if (cookies == null) {
@@ -135,86 +128,80 @@ var cleverbot = async (stimulus, context = []) => {
     return decodeURIComponent(req.header["cboutput"]);
 };
 
+// https://github.com/IntriguingTiles/cleverbot-free
 
-function botReady(){
+
+function botReady() {
     findStranger()
 }
 
-function findStranger(){
-    if(om.connected()){
+function findStranger() {
+    if (om.connected()) {
         om.disconnect()
     }
 
     clearTimeout(timer)
 
-    timer = setTimeout(function(){
-        if(automatic){
+    timer = setTimeout(function () {
+        if (automatic) {
 
-            sendMessage("Timedout, next stranger.")
-            consoleInfo("Evilbot: Timedout, next stranger.", Magenta)
+            sendMessageAndLog("Timedout, next stranger.", "Evilbot".evilbot)
 
-            findStranger()    
+            findStranger()
 
         }
-    }, conversationTimeout) 
+    }, conversationTimeout)
 
-    context=[]
+    context = []
 
     om.connect()
 }
 
 om.on('omerror', function (err) {
-    consoleInfo("Error: " + err, Red)
-
-    //om.connect();
+    sendMessageAndLog(("Error: " + err).error)
 });
 
 om.on('gotID', function (id) {
-    if(id == null){
-        consoleInfo("Planet earth is blue, and you are banned.", Red)
-    }else{
-        consoleInfo("Connected to the server as: " + id)
+    if (id == null) {
+        sendMessageAndLog("Planet earth is blue, and you are banned.".error)
+    } else {
+        sendMessageAndLog(("Connected to the server as: ".info + id.subinfo))
     }
 });
 om.on('waiting', function () {
-    consoleInfo("Waiting for a stranger...")
+    sendMessageAndLog("Waiting for a stranger...".info)
 });
 
-om.on('antinudeBanned', function(res){
-    consoleInfo("Planet earth is blue, and you are banned.", Red)
+om.on('antinudeBanned', function (res) {
+    sendMessageAndLog("Planet earth is blue, and you are banned.".error)
 })
 
 
 om.on('connected', function () {
-    if(automatic){
-        pushNewConversation()       
-    }
-
-    consoleInfo("Connected to a stranger", Green)
+    pushNewConversation()
+    
+    sendMessageAndLog("Connected to a stranger".info)
 });
 
 var context = []
 
 
 om.on('gotMessage', function (msg) {
-    msg = formatMessage(msg)
-
-    consoleInfo("Stranger: " + msg, Green)
 
     clearTimeout(timer)
 
-    timer = setTimeout(function(){
-        if(automatic){
+    timer = setTimeout(function () {
+        if (automatic) {
             findStranger()
-            sendMessage("Timedout, next stranger.")
-            consoleInfo("Evilbot: Timedout, next stranger.", Magenta)
+            sendMessageAndLog("Timedout, next stranger.", "Evilbot".evilbot)
         }
-    }, conversationTimeout) 
+    }, conversationTimeout)
 
 
     context.push(msg)
-    pushMessageToDatabase("Stranger", msg)
-    converso = converso + "Stranger: " + msg + "\n"
+
+    sendMessageAndLog(msg,"Stranger".stranger, true)
+    
 
     cleverbot(msg, context).then(response => {
         if (evilbot) {
@@ -222,16 +209,13 @@ om.on('gotMessage', function (msg) {
             om.startTyping()
             setTimeout(() => {
                 if (questionQuestions) {
-                    consoleInfo("Evilbot wants to say: " + response + " (Y/N)", Red)
+                    sendMessageAndLog(("Evilbot wants to say: " + response + " (Y/N)").question)
                     wantSay = response
                 } else {
-                    sendMessage(response)
-                    pushMessageToDatabase("EvilBot", response)
-                    om.stopTyping()
-                    consoleInfo("Evilbot: " + response, Magenta)
+                    sendMessageAndLog(response, "Evilbot".evilbot, true)
 
-                    converso = converso + "Evilbot: " + response + " \n"
-                    
+                    om.stopTyping()
+
                     context.push(response)
                 }
 
@@ -245,14 +229,12 @@ om.on('gotMessage', function (msg) {
 });
 
 om.on('strangerDisconnected', function () {
-    console.log("\x1b[33m", 'stranger disconnected.', "\x1b[37m");
-    converso = converso + "Stranger disconnected. \n"
+    sendMessageAndLog("Stranger disconnected".warn)
 
-    if(automatic){
+    if (automatic) {
         findStranger()
     }
 
-    //om.connect()
 });
 
 
@@ -276,31 +258,30 @@ rl.on('line', (answer) => {
     if (commands[he]) {
         commands[he](nice)
     } else {
-        consoleInfo("Command not found", Cyan)
+        sendMessageAndLog("Command not found".warn)
     }
 
     //rl.close();
 });
 
-
+/*
 register("save", function (args) {
     fs.writeFile(nice.join(" "), converso, function (err) {
         if (err) return console.log(err);
         consoleInfo('Written > ' + nice.join(" "), Cyan)
     });
 })
+*/
 
 register("say", function (args) {
 
-    sendMessage(args.join(" "))
-    pushMessageToDatabase("You", args.join(" "))
-    consoleInfo("You: " + args.join(" "), Cyan)
-    converso = converso + "You: " + args.join(" ") + "\n"
+    sendMessageAndLog(args.join(" "), "You".feedback, true)
+    context.push(args.join(" "))
 
 })
 register("clear", function (args) {
     context = []
-    consoleInfo("Context clear", Cyan)
+    sendMessageAndLog("Context clear".feedback)
 })
 
 register("next", function (args) {
@@ -308,15 +289,14 @@ register("next", function (args) {
         om.disconnect()
     }
     context = []
-    converso = ""
 
     om.connect()
 })
 
 register("language", function (args) {
-    om.language = args[0]
+    om.language = args[0].trim()
 
-    consoleInfo("Language is now " + om.language, Cyan)
+    sendMessageAndLog(("Language is now " + om.language).feedback)
 })
 
 
@@ -328,13 +308,13 @@ register("automatic", function (args) {
         automatic = true
     }
 
-    consoleInfo("Automatic is now " + automatic, Cyan)
+    sendMessageAndLog(("Automatic is now " + automatic).feedback)
 })
 
 register("timeout", function (args) {
     conversationTimeout = parseInt(args[0])
 
-    consoleInfo("Timeout is now " + conversationTimeout, Cyan)
+    sendMessageAndLog(("Timeout is now " + conversationTimeout).feedback)
 })
 
 register("question", function (args) {
@@ -345,7 +325,7 @@ register("question", function (args) {
         questionQuestions = true
     }
 
-    consoleInfo("Question is now " + questionQuestions, Cyan)
+    sendMessageAndLog(("Question is now " + questionQuestions).feedback)
 })
 
 register("ai", function (args) {
@@ -357,7 +337,7 @@ register("ai", function (args) {
         evilbot = true
     }
 
-    consoleInfo("AI is now " + evilbot, Cyan)
+    sendMessageAndLog(("AI is now " + evilbot).feedback)
 })
 
 register("y", function (args) {
@@ -365,12 +345,10 @@ register("y", function (args) {
     if (wantSay == "") {
         return
     }
-    sendMessage(wantSay)
+
     om.stopTyping()
 
-    converso = converso + "EvilBot: " + wantSay + "\n"
-    consoleInfo("Evilbot: " + wantSay, Magenta)
-    pushMessageToDatabase("Evilbot", wantSay)
+    sendMessageAndLog(wantSay, "Evilbot".evilbot, true)
     context.push(wantSay)
     wantSay = ""
 
@@ -381,7 +359,11 @@ register("n", function (args) {
     om.stopTyping()
 })
 
-register("setdatabase", function(args){
+register("setdatabase", function (args) {
+    saveDatabase()
+
+    database=[]
+
     databaseName = args.join(" ");
-    consoleInfo("Database is now" + databaseName, Cyan)
+    sendMessageAndLog(("Database is now" + databaseName).feedback)
 })

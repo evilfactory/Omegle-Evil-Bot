@@ -4,14 +4,12 @@
   "description": "",
   "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node bot.js"
   },
   "author": "EvilFactory",
   "license": "ISC",
-  "scripts": {
-    "start": "node bot.js"
-  },
   "dependencies": {
+    "colors": "^1.4.0",
     "fasttext.js": "^1.1.2",
     "lodash": "^4.17.15",
     "md5": "^2.2.1",
