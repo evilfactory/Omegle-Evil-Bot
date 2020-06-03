@@ -5,7 +5,7 @@ var colors = require('colors');
 var questionQuestions = false;
 var automatic = true // haha machine domination
 var evilbot = true
-var databaseName = "fundatabase.json"
+var databaseName = "database.json"
 om.language = "pt"
 var conversationTimeout = 160000
 
