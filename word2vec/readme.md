@@ -1,4 +1,4 @@
-#Word2vec
+# Word2vec
 
 ### I'm still working on this
 
