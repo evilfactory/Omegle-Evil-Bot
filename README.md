@@ -8,7 +8,7 @@
 
 ### Commands
 
-**ai 0/1** - Disables/Enables cleverbot
+**ai 0/1** - Disables/Enables cleverbot \n
 **question 0/1** - Disables/Enables need for confirmation
 **automatic 0/1** - Disables/Enables automatic mode(leave chat when stranger is afk or find another stranger when he quits)
 **timeout number** - Sets the stranger afk time limit
