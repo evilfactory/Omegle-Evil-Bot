@@ -1,5 +1,9 @@
-how to make this work
+#Word2vec
 
-first clone https://github.com/Planeshifter/node-word2vec into this folder
+### I'm still working on this
 
-and then go to the folder node-word2vec and type npm install
+To make it work you need clone
+
+how to make this work you need clone https://github.com/Planeshifter/node-word2vec into this folder
+
+and then install the depedencies
