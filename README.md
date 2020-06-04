@@ -24,7 +24,7 @@
 
 - **setdatabase** - Sets the database file
 
-**note: all these settings can be changed through the file bot.js**
+**note: all these settings can be changed through the file config.js**
 
 **database_merge.js** - a simple nodejs script that merges two databases(database1+database2=database3)
 
