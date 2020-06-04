@@ -2,12 +2,14 @@ var Omegle = require('./omeglebot.js');
 var om = new Omegle();
 var colors = require('colors');
 
-var questionQuestions = false;
-var automatic = true // haha machine domination
-var evilbot = true
-var databaseName = "database.json"
-om.language = "pt"
-var conversationTimeout = 160000
+var config = require('./config.js')
+
+var questionQuestions = config.question;
+var automatic = config.automatic // haha machine domination
+var evilbot = config.ai
+var databaseName = config.databaseName
+om.language = config.language
+var conversationTimeout = config.conversationTimeout
 
 fs = require('fs');
 
