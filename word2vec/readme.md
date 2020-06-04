@@ -4,6 +4,6 @@
 
 To make it work you need clone
 
-how to make this work you need clone https://github.com/Planeshifter/node-word2vec into this folder
+to make this work you need clone https://github.com/Planeshifter/node-word2vec into this folder
 
 and then install the depedencies
