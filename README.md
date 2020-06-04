@@ -1,7 +1,9 @@
-# omegleEvilBot
- 
-# how to install this shit
+# Omegle Evil Bot
 
-# 1) clone this shit
-# 2) npm install while in the repo dir
-# 3) node bot.js to run
+### How to install
+
+- Clone repo
+
+- npm install to install depedencies
+
+- node bot.js to run the bot
