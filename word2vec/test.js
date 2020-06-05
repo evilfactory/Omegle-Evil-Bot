@@ -39,7 +39,7 @@ w2v.loadModel( __dirname + "/../data/vectors.txt", function( err, model ) {
 
 
 
-fs.readFile('../data/database.json', 'utf8', function (err, data) {
+fs.readFile('../data/database2.json', 'utf8', function (err, data) {
 	if (err) {
 		return console.log(err);
 	}
@@ -48,7 +48,7 @@ fs.readFile('../data/database.json', 'utf8', function (err, data) {
 	
 	for(var i=0; i < database.length; i++){
 		
-		if(database[i].date == "1590789067460"){
+		if(database[i].date == "1590921978128"){
 			for(var j=0; j<database[i].conversation.length; j++){
 				if(database[i].conversation[j].name == "Stranger"){
 					console.log(Cyan,database[i].conversation[j].name+": "+database[i].conversation[j].msg)
