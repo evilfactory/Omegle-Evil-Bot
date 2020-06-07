@@ -1,5 +1,7 @@
 var Omegle = require('./omeglebot.js');
 var om = new Omegle();
+var om2 = new Omegle();
+
 var colors = require('colors');
 
 var config = require('./config.js')
@@ -7,8 +9,13 @@ var config = require('./config.js')
 var questionQuestions = config.question;
 var automatic = config.automatic // haha machine domination
 var evilbot = config.ai
+var mitm = config.mitm
 var databaseName = config.databaseName
+var spyMode = config.spyMode
+var setQuestionToTrueEveryConnect = config.setQuestionToTrueEveryConnect
+var logDatabase = config.logDatabase
 om.language = config.language
+om2.language = config.language
 var conversationTimeout = config.conversationTimeout
 
 fs = require('fs');
@@ -21,6 +28,7 @@ const superagent = require("superagent");
 const md5 = require("md5");
 
 var wantSay = ""
+var whatStranger = false;
 
 var timer;
 
@@ -30,6 +38,7 @@ var commands = [];
 
 var database = []
 
+var dontCallAgain=false
 
 colors.setTheme({
     silly: 'rainbow',
@@ -43,7 +52,7 @@ colors.setTheme({
     warn: 'yellow',
     feedback: 'blue',
     question: 'brightMagenta'
-  });
+});
 
 function loadDatabase() {
 
@@ -71,31 +80,31 @@ function saveDatabase() {
 }
 
 function pushNewConversation() {
-    if (!automatic) { return; }
+    if (!logDatabase) { return; }
     database.push({ date: Date.now().toString(), conversation: [] })
 
     saveDatabase()
 }
 
 function pushMessageToDatabase(name, msg) {
-    if (!automatic) { return; }
+    if (!logDatabase) { return; }
     database[database.length - 1].conversation.push({ name: name, msg: msg })
 
     saveDatabase()
 }
 
-function sendMessageAndLog(msg, name = "", database=false, sendtoomegle=false) {
+function sendMessageAndLog(msg, name = "", database = false, sendtoomegle = false) {
     if (!database) {
         console.log(msg)
 
-        if(sendtoomegle){
+        if (sendtoomegle) {
             om.send(colors.strip(msg));
         }
 
     } else {
         console.log(name + ":" + " " + msg)
 
-        if(sendtoomegle){
+        if (sendtoomegle) {
             om.send(colors.strip(msg));
         }
 
@@ -149,6 +158,15 @@ function findStranger() {
     if (om.connected()) {
         om.disconnect()
     }
+    if (om2.connected()) {
+        om2.disconnect();
+    }
+
+    dontCallAgain=false
+
+    if(setQuestionToTrueEveryConnect){
+        questionQuestions=true
+    }
 
     clearTimeout(timer)
 
@@ -162,9 +180,7 @@ function findStranger() {
         }
     }, conversationTimeout)
 
-    context = []
-
-    om.connect()
+    om.connect(false,spyMode)
 }
 
 om.on('omerror', function (err) {
@@ -178,6 +194,21 @@ om.on('gotID', function (id) {
         sendMessageAndLog(("Connected to the server as: ".info + id.subinfo))
     }
 });
+
+
+om.on('typing', function () {
+    if (mitm && om2.connected()) {
+        om2.startTyping();
+    }
+});
+
+om.on('stoppedTyping', function () {
+    if (mitm && om2.connected()) {
+        om2.stopTyping();
+    }
+});
+
+
 om.on('waiting', function () {
     sendMessageAndLog("Waiting for a stranger...".info)
 });
@@ -189,8 +220,15 @@ om.on('antinudeBanned', function (res) {
 
 om.on('connected', function () {
     pushNewConversation()
-    
+
     sendMessageAndLog("Connected to a stranger".info)
+
+    
+    if (mitm && dontCallAgain == false) {
+        setTimeout(function(){
+            om2.connect(false,spyMode)
+        }, 1000)
+    }
 });
 
 var context = []
@@ -210,8 +248,25 @@ om.on('gotMessage', function (msg) {
 
     context.push(msg)
 
-    sendMessageAndLog(msg.substranger,"Stranger".stranger, true, false)
-    
+    if (mitm) {
+        if (questionQuestions) {
+
+            sendMessageAndLog(("Stranger wants to say: " + msg + " (Y/N)").question)
+            wantSay = msg
+            whatStranger = false
+        } else {
+            sendMessageAndLog(msg.substranger, "Stranger".stranger, true, false)
+
+            if(om2.connected()){
+                om2.send(msg)
+            }
+        }
+
+        return;
+    }
+
+    sendMessageAndLog(msg.substranger, "Stranger".stranger, true, false)
+
 
     cleverbot(msg, context).then(response => {
         if (evilbot) {
@@ -222,7 +277,7 @@ om.on('gotMessage', function (msg) {
                     sendMessageAndLog(("Evilbot wants to say: " + response + " (Y/N)").question)
                     wantSay = response
                 } else {
-                    sendMessageAndLog(response.subevilbot, "Evilbot".evilbot, true,true)
+                    sendMessageAndLog(response.subevilbot, "Evilbot".evilbot, true, true)
 
                     om.stopTyping()
 
@@ -247,6 +302,58 @@ om.on('strangerDisconnected', function () {
 
 });
 
+
+om2.on('omerror', function (err) {
+    sendMessageAndLog(("Error 2: " + err).error)
+});
+
+om2.on('gotID', function (id) {
+    if (id == null) {
+        sendMessageAndLog("Planet earth is blue, and you are banned.".error)
+    } else {
+        sendMessageAndLog(("Connected to the server 2 as: ".info + id.subinfo))
+    }
+});
+
+om2.on('connected', function () {
+    sendMessageAndLog("Connected to stranger 2".info)
+});
+
+
+om2.on('gotMessage', function (msg) {
+    if (questionQuestions) {
+
+        sendMessageAndLog(("Stranger 2 wants to say: " + msg + " (Y/N)").question)
+        wantSay = msg
+        whatStranger = true
+    } else {
+
+        sendMessageAndLog(msg.substranger, "Stranger2".stranger, true, false)
+        if(om.connected()){
+            om.send(msg);
+        }
+    }
+});
+
+om2.on('typing', function () {
+    if(om.connected()){
+        om.startTyping();
+    }
+});
+
+om2.on('stoppedTyping', function () {
+    if(om.connected()){
+        om.stopTyping();
+    }
+});
+
+om2.on('strangerDisconnected', function () {
+    sendMessageAndLog("Stranger 2 disconnected".warn)
+
+    if(automatic){
+        findStranger()
+    }
+});
 
 
 const rl = readline.createInterface({
@@ -289,18 +396,59 @@ register("say", function (args) {
     context.push(args.join(" "))
 
 })
+
+register("say2", function (args) {
+    if(mitm){
+        sendMessageAndLog(args.join(" "), "You".feedback, true, false)
+        om2.send(args.join(" "))
+        context.push(args.join(" "))
+    }
+})
+
+register("say3", function (args) {
+    if(mitm){
+        sendMessageAndLog(args.join(" "), "You".feedback, true, false)
+        om2.send(args.join(" "))
+        om.send(args.join(" "))
+        context.push(args.join(" "))
+    }
+})
+
 register("clear", function (args) {
     context = []
     sendMessageAndLog("Context clear".feedback)
 })
 
 register("next", function (args) {
-    if (om.connected()) {
-        om.disconnect()
-    }
-    context = []
 
-    om.connect()
+    if(args[0] == "1"){
+        if(om.connected()){
+            om.disconnect()
+        }
+
+        if(setQuestionToTrueEveryConnect){
+            questionQuestions=true;
+        }
+
+        om.connect([], spyMode)
+        setQuestionToTrueEveryConnect=true
+    }
+    if(args[0] == "2"){
+        if(om2.connected()){
+            om2.disconnect()
+        }
+        
+        if(setQuestionToTrueEveryConnect){
+            questionQuestions=true;
+        }
+        om2.connect([], spyMode)
+    }
+    if(args[0] != "1" && args[0] != "2"){
+
+        findStranger()
+
+        context = []
+    }
 })
 
 register("language", function (args) {
@@ -356,11 +504,26 @@ register("y", function (args) {
         return
     }
 
-    om.stopTyping()
+    if (mitm) {
 
-    sendMessageAndLog(wantSay.subevilbot, "Evilbot".evilbot, true, true)
-    context.push(wantSay)
-    wantSay = ""
+        if(whatStranger){
+            sendMessageAndLog(wantSay.substranger, "Stranger 2".stranger, true, false)
+            om.send(wantSay)
+        }else{  
+            sendMessageAndLog(wantSay.substranger, "Stranger".stranger, true, false)
+            dontCallAgain=true
+            om2.send(wantSay)
+        }
+        
+    } else {
+
+        om.stopTyping()
+
+        sendMessageAndLog(wantSay.subevilbot, "Evilbot".evilbot, true, true)
+        context.push(wantSay)
+        wantSay = ""
+
+    }
 
 })
 
@@ -372,7 +535,7 @@ register("n", function (args) {
 register("setdatabase", function (args) {
     saveDatabase()
 
-    database=[]
+    database = []
 
     databaseName = args.join(" ");
     sendMessageAndLog(("Database is now" + databaseName).feedback)

@@ -3,7 +3,7 @@
 var request = require('request');
 var ee = require('events').EventEmitter;
 var util = require('util');
-var qs = require('query-string');
+var qs = require('querystring');
 var Omegle = function () {
 	ee.call(this);
 	this.useragent = 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0';
@@ -18,7 +18,6 @@ var Omegle = function () {
 	var typing = false;
 	var challenge = ''; // to store recaptcha challenge.
 	var challengeLink = '';
-	
 	//to check if the client is connected to the server
 	this.connected = function () {
 		return isConnected;
@@ -67,14 +66,20 @@ var Omegle = function () {
 			}
 		});
 	};
-	this.connect = function (topics = false) {
+	this.connect = function (topics = false, spyMode = false) {
 		this.updateServer();
+		
+		if (spyMode == true) spyMode = 1;
+
 		var data = {
 			rcs: 1,
 			firstevents: 1,
 			lang: this.language,
 			randid: randID(),
-			spid: ''
+			spid: '',
+			wantsspy: spyMode,
+			//required parameter to received the recaptchaRequired event
+			caps: 'recaptcha2' 
 		};
 		if (topics) data['topics'] = formatTopics(topics);
 		getResponse('/start', data, function (body, error) {
@@ -115,7 +120,7 @@ var Omegle = function () {
 	var emitEvents = function (ev) {
 		if (!ev) return;
 		var eventsArr = ['waiting', 'connected', 'error', 'connectionDied', 'antinudeBanned', 'typing',
-							'stoppedTyping', 'gotMessage', 'strangerDisconnected', 'recaptchaRequired',
+							'stoppedTyping', 'gotMessage', 'question', 'strangerDisconnected', 'recaptchaRequired',
 							'recaptchaRejected', 'commonLikes'];
 		for (var i = 0; i < ev.length; ++i) {
 			var currentEvent = ev[i][0];
@@ -137,7 +142,7 @@ var Omegle = function () {
 				_this.emit('connectionDied');
 			}
 			else if (currentEvent == 'antinudeBanned') {
-				reset();
+				//reset();
 				_this.emit('antinudeBanned');
 			}
 			else if (currentEvent == 'typing') {
@@ -149,6 +154,10 @@ var Omegle = function () {
 				if (typing) _this.emit('stoppedTyping');
 				for (var j = 1; j < ev[i].length; ++j) _this.emit('gotMessage', ev[i][j]);
 			}
+			else if (currentEvent == 'question') {
+				if (typing) _this.emit('stoppedTyping');
+				for (var j = 1; j < ev[i].length; ++j) _this.emit('question', ev[i][j]);
+			}
 			else if (currentEvent == 'strangerDisconnected') {
 				reset();
 				_this.emit('strangerDisconnected');
@@ -159,17 +168,8 @@ var Omegle = function () {
 		}
 	};
 	var evalCaptcha = function (pchallengeLink) {
-		challengeLink = pchallengeLink;
-		var url = 'http://www.google.com/recaptcha/api/challenge?k=' + pchallengeLink;
-		request.get(url, function (error, response, body) {
-			if (!error && response.statusCode == 200) {
-				var close = body.indexOf('}');
-				//I give up. JSON.parse, you have failed me, or maybe I'm just dumb.
-				eval(body.substring(0, close + 1)); // jshint ignore:line
-				challenge = RecaptchaState.challenge; // jshint ignore:line
-				_this.emit('recaptchaRequired', 'http://www.google.com/recaptcha/api/image?c=' + challenge);
-			}
-		});
+		//recaptcha2 requires client side includes to work, provide the end user with the challenge so they may embed the google code passing the site_key as this challenge
+		this.emit('recaptchaRequired', pchallengeLink);
 	};
 	this.reloadReCAPTCHA = function () {
 		if (challengeLink) evalCaptcha(challengeLink);
@@ -284,14 +284,14 @@ var Omegle = function () {
 	// I haven't tested this, because I'd first have to get banned to be able to test this, but it should work.
 	// Nevermind, I got banned today, turns out I implemented recaptcha handling totally wrong. Now it's working.
 	this.solveReCAPTCHA = function (answer) {
-		if (gotID && challenge) {
+		if (gotID) {
 			var data = {
 				id: id,
-				challenge: challenge,
 				response: answer
 			};
 			getResponse('/recaptcha', data, function (body, error) {
 				if (error) _this.emit('omerror', 'solveReCAPTCHA(): ' + error);
+				//body returns win or false depending on the result
 			});
 		}
 		else _this.emit('omerror', 'solveReCAPTCHA(): Not connected to the server or there\'s no ReCAPTCHA.');
