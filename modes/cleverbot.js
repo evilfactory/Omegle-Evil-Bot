@@ -57,7 +57,7 @@ function saveDatabase() {
 
 
 function pushNewConversation(lang) {
-    database.push({ date: Date.now().toString(), language: lang, conversation: [] })
+    database.push({ 'date': Date.now().toString(), 'language': lang, conversation: [] })
 
     saveDatabase()
 }
@@ -99,7 +99,7 @@ stranger.on("gotID", function(){
 
 stranger.on("connected", function(){
     context = []
-    pushNewConversation(stranger.language)
+    pushNewConversation(stranger.om.language)
 })
 
 stranger.on("message", function (msg) {
