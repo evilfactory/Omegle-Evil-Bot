@@ -83,9 +83,9 @@ function sendToAPIServer(name, msg){
 
 function runAPIServer(){
 
-    logger.log("API server running on port 3001")
+    logger.log("API server running on port 3007")
 
-    io = require("socket.io")(3001)
+    io = require("socket.io")(3007)
 
     io.on('connection', function(socket){
         socket.emit("datafromserver", APIServerMessageList)
