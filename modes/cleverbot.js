@@ -69,14 +69,18 @@ function pushMessageToDatabase(name, msg) {
     saveDatabase()
 }
 
+function filterText(text){
+    return text.replace(/[^\x00-\x7F]/g, "")
+}
+
 var APIServerMessageList = []
 
 function sendToAPIServer(name, msg){
     if(!io){return}
-    io.emit("msg", {name: name, msg: msg})
-    APIServerMessageList.push({name: name, msg: msg})
+    io.emit("msg", {name: name, msg: filterText(msg)})
+    APIServerMessageList.push({name: name, msg: filterText(msg)})
 
-    if(APIServerMessageList.length > 50){
+    if(APIServerMessageList.length > 25){
         APIServerMessageList.splice(0,1)
     }
 }
