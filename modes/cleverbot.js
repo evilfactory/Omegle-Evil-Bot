@@ -64,11 +64,38 @@ function pushNewConversation(lang) {
 
 function pushMessageToDatabase(name, msg) {
     database[database.length - 1].conversation.push({ name: name, msg: msg, date: Date.now().toString() })
+    sendToAPIServer(name, msg)
 
     saveDatabase()
 }
 
-var stranger = new createStranger("stranger", false)
+var APIServerMessageList = []
+
+function sendToAPIServer(name, msg){
+    if(!io){return}
+    io.emit("msg", {name: name, msg: msg})
+    APIServerMessageList.push({name: name, msg: msg})
+
+    if(APIServerMessageList.length > 50){
+        APIServerMessageList.splice(0,1)
+    }
+}
+
+function runAPIServer(){
+
+    logger.log("API server running on port 3001")
+
+    io = require("socket.io")(3001)
+
+    io.on('connection', function(socket){
+        socket.emit("datafromserver", APIServerMessageList)
+
+        logger.log("User connected to API Server", logger.logInfo);
+        
+    })
+}
+
+var stranger = new createStranger("Stranger", false)
 
 var context = []
 
@@ -100,6 +127,12 @@ stranger.on("gotID", function(){
 stranger.on("connected", function(){
     context = []
     pushNewConversation(stranger.om.language)
+
+    sendToAPIServer("SERVER", "Connected to a stranger")
+})
+
+stranger.on("disconnected", function(){
+    sendToAPIServer("SERVER", "Stranger disconnected")
 })
 
 stranger.on("message", function (msg) {
@@ -201,6 +234,10 @@ consoleInputManager.on(function (msg) {
         logger.log("Autoquit time set to " + autoquit, logger.logInfo)
         timetoquit = autoquit
     }
+
+    if(command == "apiserver"){
+        runAPIServer()
+    }
 })
 
 
@@ -211,6 +248,7 @@ loadDatabase(function(){
     "'autoconnect 0/1' to connect automatically\n" +
     "'question 0/1' to question cleverbot responses\n" +
     "'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)\n" +
+    "'apiserver' starts api server\n" +
     "'cleverbot 0/1' to disable/enable cleverbot", logger.logInfo)
 
     ready=true

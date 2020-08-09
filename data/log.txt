@@ -1296,3 +1296,833 @@ BOT RESTART
 2020-08-09 19:39:21: [?] stranger connected to the server as: shard2:4onewpa0zgsky46ekzrdyfnzmpnxt4
 2020-08-09 19:39:21: [?] stranger waiting for someone.
 2020-08-09 19:39:21: [+] stranger connected to someone
+ 
+BOT RESTART
+
+2020-08-09 20:10:52: [?] Loading avaiable scripts...
+2020-08-09 20:10:52: [?] Choose the script that you want use: 
+2020-08-09 20:10:52:  0) modes/cleverbot.js
+2020-08-09 20:10:52:  1) modes/mitm.js
+2020-08-09 20:10:55: [?] Loading cleverbot.js script!
+2020-08-09 20:10:55: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 20:10:59: [?] stranger connected to the server as: shard2:s0c0ljptw49nmo3ch3tugwk00api7t
+2020-08-09 20:10:59: [?] stranger waiting for someone.
+2020-08-09 20:11:00: [+] stranger connected to someone
+2020-08-09 20:11:14:  stranger: Hi
+2020-08-09 20:11:17:  Cleverbot: How are you?
+2020-08-09 20:11:23:  stranger: I’m bored
+2020-08-09 20:11:26:  Cleverbot: Mine is blue.
+2020-08-09 20:11:33:  stranger: Lol
+2020-08-09 20:11:34:  Cleverbot: Laugh out loud.
+2020-08-09 20:11:36:  stranger: Wym
+2020-08-09 20:11:37:  Cleverbot: What do you mean?
+2020-08-09 20:11:43:  stranger: Yeah
+2020-08-09 20:11:44:  Cleverbot: So what day is it?
+2020-08-09 20:11:57:  stranger: Aug 9
+2020-08-09 20:11:58:  Cleverbot: Jo.
+2020-08-09 20:12:03:  stranger: Huh
+2020-08-09 20:12:04:  Cleverbot: Never mind.
+2020-08-09 20:12:17:  stranger: I’m confused explain me 
+2020-08-09 20:12:19:  Cleverbot: Me too.
+2020-08-09 20:12:32:  stranger: Why you said mine is blue
+2020-08-09 20:12:34:  Cleverbot: So we both have the same favorite color.
+2020-08-09 20:12:50:  stranger: Lol I said I’m bored
+2020-08-09 20:12:51:  Cleverbot: I hate rock.
+2020-08-09 20:13:02:  stranger: Are you ok
+2020-08-09 20:13:04:  Cleverbot: Not really.
+2020-08-09 20:13:15:  stranger: How come
+2020-08-09 20:13:16:  Cleverbot: Well I don't know who River Song is.
+2020-08-09 20:13:44: [!] stranger disconnected.
+ 
+BOT RESTART
+
+2020-08-09 20:25:07: [?] Loading avaiable scripts...
+2020-08-09 20:25:07: [?] Choose the script that you want use: 
+2020-08-09 20:25:07:  0) modes/cleverbot.js
+2020-08-09 20:25:07:  1) modes/mitm.js
+2020-08-09 20:25:09: [?] Loading cleverbot.js script!
+2020-08-09 20:25:09: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 20:25:12:  API server running on port 3001
+ 
+BOT RESTART
+
+2020-08-09 20:26:15: [?] Loading avaiable scripts...
+2020-08-09 20:26:15: [?] Choose the script that you want use: 
+2020-08-09 20:26:15:  0) modes/cleverbot.js
+2020-08-09 20:26:15:  1) modes/mitm.js
+2020-08-09 20:26:16: [?] Loading cleverbot.js script!
+2020-08-09 20:26:16: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 20:26:17:  API server running on port 3001
+ 
+BOT RESTART
+
+2020-08-09 20:31:43: [?] Loading avaiable scripts...
+2020-08-09 20:31:43: [?] Choose the script that you want use: 
+2020-08-09 20:31:43:  0) modes/cleverbot.js
+2020-08-09 20:31:43:  1) modes/mitm.js
+2020-08-09 20:31:44: [?] Loading cleverbot.js script!
+2020-08-09 20:31:44: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 20:31:47:  API server running on port 3001
+2020-08-09 20:31:47: [?] User connected to API Server
+2020-08-09 20:31:50: [?] stranger connected to the server as: shard2:dg2sio0babl53xmb32ckbefet8vf2y
+2020-08-09 20:31:50: [?] stranger waiting for someone.
+2020-08-09 20:31:50: [+] stranger connected to someone
+ 
+BOT RESTART
+
+2020-08-09 20:32:18: [?] Loading avaiable scripts...
+2020-08-09 20:32:18: [?] Choose the script that you want use: 
+2020-08-09 20:32:18:  0) modes/cleverbot.js
+2020-08-09 20:32:18:  1) modes/mitm.js
+2020-08-09 20:32:19: [?] Loading cleverbot.js script!
+2020-08-09 20:32:19: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 20:32:23:  API server running on port 3001
+2020-08-09 20:32:25: [?] stranger connected to the server as: shard2:skocdyd0t9fv88c5udq01a6z49nwlw
+2020-08-09 20:32:25: [?] stranger waiting for someone.
+2020-08-09 20:32:26: [+] stranger connected to someone
+2020-08-09 20:32:27: [?] User connected to API Server
+2020-08-09 20:32:42: [?] stranger connected to the server as: shard2:z5zamel2y77f0s3uh3w17pc73u3u36
+2020-08-09 20:32:42: [?] stranger waiting for someone.
+2020-08-09 20:32:43: [+] stranger connected to someone
+2020-08-09 20:32:44:  stranger: Horny m 16
+2020-08-09 20:32:46:  Cleverbot: Yes.
+2020-08-09 20:32:55:  stranger: M or f
+2020-08-09 20:32:57:  Cleverbot: Dare.
+ 
+BOT RESTART
+
+2020-08-09 20:33:04: [?] Loading avaiable scripts...
+2020-08-09 20:33:04: [?] Choose the script that you want use: 
+2020-08-09 20:33:04:  0) modes/cleverbot.js
+2020-08-09 20:33:04:  1) modes/mitm.js
+2020-08-09 20:33:05: [?] Loading cleverbot.js script!
+2020-08-09 20:33:05: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 20:33:06:  API server running on port 3001
+2020-08-09 20:33:07: [?] User connected to API Server
+2020-08-09 20:33:08: [?] stranger connected to the server as: shard2:enh960uke8igbrhwx1yamun9suer4c
+2020-08-09 20:33:08: [?] stranger waiting for someone.
+2020-08-09 20:33:08: [+] stranger connected to someone
+2020-08-09 20:33:14:  stranger: ,..k so u exchange?👅 Fem..kik* ioundret64
+2020-08-09 20:33:16:  Cleverbot: Her mother doesn't like that Typ of dress.
+2020-08-09 20:33:17: [!] stranger disconnected.
+ 
+BOT RESTART
+
+2020-08-09 20:36:07: [?] Loading avaiable scripts...
+2020-08-09 20:36:07: [?] Choose the script that you want use: 
+2020-08-09 20:36:07:  0) modes/cleverbot.js
+2020-08-09 20:36:07:  1) modes/mitm.js
+2020-08-09 20:36:09: [?] Loading cleverbot.js script!
+2020-08-09 20:36:09: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 20:36:10:  API server running on port 3001
+2020-08-09 20:36:12: [?] stranger connected to the server as: shard2:ddh3hfowvvngd8nbh7zpqssx6wpybl
+2020-08-09 20:36:12: [?] stranger waiting for someone.
+2020-08-09 20:36:12: [+] stranger connected to someone
+2020-08-09 20:36:13: [?] User connected to API Server
+2020-08-09 20:36:16:  stranger: hey
+2020-08-09 20:36:18:  Cleverbot: How are you doing?
+2020-08-09 20:36:26:  stranger: good
+2020-08-09 20:36:27:  Cleverbot: Nice so what's your name?
+2020-08-09 20:36:28:  stranger: age?
+2020-08-09 20:36:30:  Cleverbot: Again personal.
+2020-08-09 20:36:36:  stranger: No wait
+2020-08-09 20:36:37:  Cleverbot: Waw.
+2020-08-09 20:36:45:  stranger: I am just a kid 
+2020-08-09 20:36:46:  Cleverbot: Are religious institutions that discriminate against the LGBT community hate groups?
+2020-08-09 20:36:57:  stranger: No 
+2020-08-09 20:36:58:  Cleverbot: Do you like Ireland?
+2020-08-09 20:37:02:  stranger: yes
+2020-08-09 20:37:04:  Cleverbot: What is your favorite show?
+2020-08-09 20:37:11:  stranger: gotham
+2020-08-09 20:37:13:  Cleverbot: What else?
+2020-08-09 20:37:16:  stranger: Dr who
+2020-08-09 20:37:19:  Cleverbot: No just the doctor.
+2020-08-09 20:37:30:  stranger: f.r.i.e.n.d.s.
+2020-08-09 20:37:33:  Cleverbot: This song is good.
+2020-08-09 20:37:47:  stranger: I'm 13
+2020-08-09 20:37:48:  Cleverbot: Okay.
+2020-08-09 20:37:56:  stranger: you are?
+2020-08-09 20:37:59:  Cleverbot: I know.
+2020-08-09 20:38:10:  stranger: I'm confused
+2020-08-09 20:38:11:  Cleverbot: About what?
+2020-08-09 20:38:20:  stranger: are you 13?
+2020-08-09 20:38:22:  Cleverbot: No, I am 23 years old.
+2020-08-09 20:38:27:  stranger: hahaha
+2020-08-09 20:38:28:  Cleverbot: What is your favorite Anime?
+2020-08-09 20:38:41:  stranger: Hentai
+2020-08-09 20:38:42:  Cleverbot: What do you think of Deuce from Type 0?
+2020-08-09 20:38:48:  stranger: no
+2020-08-09 20:38:49:  Cleverbot: Have you ever kissed a horse?
+2020-08-09 20:38:54:  stranger: yes
+2020-08-09 20:38:55:  Cleverbot: What is your favorite animal?
+2020-08-09 20:39:01:  stranger: boobs
+2020-08-09 20:39:03:  Cleverbot: I like comic books.
+2020-08-09 20:39:08:  stranger: same
+2020-08-09 20:39:09:  Cleverbot: What is your favorite show?
+2020-08-09 20:39:19:  stranger: marvels better than dc
+2020-08-09 20:39:20:  Cleverbot: That's what you think.
+2020-08-09 20:39:27:  stranger: say potato
+2020-08-09 20:39:28:  Cleverbot: Yes, but with salt!
+2020-08-09 20:39:46:  stranger: ...
+2020-08-09 20:39:47:  Cleverbot: You.
+2020-08-09 20:39:53:  stranger: your a bpt
+2020-08-09 20:39:55:  Cleverbot: No.
+2020-08-09 20:39:56:  stranger: bot
+2020-08-09 20:39:57:  Cleverbot: What do you look like?
+2020-08-09 20:40:01:  stranger: me
+2020-08-09 20:40:03:  Cleverbot: I love you.
+2020-08-09 20:40:07:  stranger: okay
+2020-08-09 20:40:10:  Cleverbot: What's your name?
+2020-08-09 20:40:19:  stranger: are you a bot
+2020-08-09 20:40:20:  Cleverbot: No I am human.
+2020-08-09 20:40:28:  stranger: Say potato then
+2020-08-09 20:40:29:  Cleverbot: Potatos are good.
+2020-08-09 20:40:37:  stranger: Your a bpt
+2020-08-09 20:40:39:  Cleverbot: No i'm not.
+2020-08-09 20:40:42:  stranger: m or f
+2020-08-09 20:40:43:  Cleverbot: F.
+2020-08-09 20:40:50:  stranger: sure
+2020-08-09 20:40:51:  Cleverbot: Where are you taking me?
+2020-08-09 20:41:01:  stranger: I wanna fuck you 
+2020-08-09 20:41:02:  Cleverbot: No.
+2020-08-09 20:41:07:  stranger: yes.
+2020-08-09 20:41:10:  Cleverbot: How are you?
+2020-08-09 20:41:15:  stranger: ge
+2020-08-09 20:41:16:  Cleverbot: Kennst du eevee?
+2020-08-09 20:41:18:  stranger: p
+2020-08-09 20:41:20:  Cleverbot: No.
+2020-08-09 20:41:27:  stranger: Bonjour
+2020-08-09 20:41:29:  Cleverbot: That's all I know.
+2020-08-09 20:41:43:  stranger: fyg
+2020-08-09 20:41:44:  Cleverbot: What does that even mean?
+2020-08-09 20:41:51: [!] stranger disconnected.
+ 
+BOT RESTART
+
+2020-08-09 20:42:03: [?] Loading avaiable scripts...
+2020-08-09 20:42:03: [?] Choose the script that you want use: 
+2020-08-09 20:42:03:  0) modes/cleverbot.js
+2020-08-09 20:42:03:  1) modes/mitm.js
+2020-08-09 20:42:05: [?] Loading cleverbot.js script!
+2020-08-09 20:42:05: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 20:42:08:  API server running on port 3001
+2020-08-09 20:42:09: [?] User connected to API Server
+2020-08-09 20:42:16: [?] stranger connected to the server as: shard2:96t7ps2krazdbdmxmvdmrsvygylv04
+2020-08-09 20:42:16: [?] stranger waiting for someone.
+2020-08-09 20:42:17: [+] stranger connected to someone
+2020-08-09 20:42:21:  stranger: ^.,.Yummy lm see you. female--kik< riountow07
+2020-08-09 20:42:23:  Cleverbot: You are male.
+2020-08-09 20:42:25: [!] stranger disconnected.
+ 
+BOT RESTART
+
+2020-08-09 20:44:47: [?] Loading avaiable scripts...
+2020-08-09 20:44:47: [?] Choose the script that you want use: 
+2020-08-09 20:44:47:  0) modes/cleverbot.js
+2020-08-09 20:44:47:  1) modes/mitm.js
+2020-08-09 20:44:48: [?] Loading cleverbot.js script!
+2020-08-09 20:44:48: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 20:44:50:  API server running on port 3001
+2020-08-09 20:44:51: [?] User connected to API Server
+2020-08-09 20:44:52: [?] stranger connected to the server as: shard2:hsw7xqbjs682b9799697yxggzstacr
+2020-08-09 20:44:52: [?] stranger waiting for someone.
+2020-08-09 20:44:53: [+] stranger connected to someone
+2020-08-09 20:44:54:  stranger: M
+2020-08-09 20:44:57:  Cleverbot: Co M.
+ 
+BOT RESTART
+
+2020-08-09 20:45:29: [?] Loading avaiable scripts...
+2020-08-09 20:45:29: [?] Choose the script that you want use: 
+2020-08-09 20:45:29:  0) modes/cleverbot.js
+2020-08-09 20:45:29:  1) modes/mitm.js
+2020-08-09 20:45:30: [?] Loading cleverbot.js script!
+2020-08-09 20:45:30: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 20:45:32:  API server running on port 3001
+2020-08-09 20:45:34: [?] stranger connected to the server as: shard2:e4fnfycm1zwe05jhw33gi2jipkus42
+2020-08-09 20:45:34: [?] stranger waiting for someone.
+2020-08-09 20:45:34: [?] User connected to API Server
+2020-08-09 20:45:35: [+] stranger connected to someone
+2020-08-09 20:45:37:  stranger: M
+2020-08-09 20:45:39:  Cleverbot: What are your questions?
+2020-08-09 20:45:48:  stranger: ??
+2020-08-09 20:45:50:  Cleverbot: What do you mean by that?
+2020-08-09 20:45:59: [!] stranger disconnected.
+ 
+BOT RESTART
+
+2020-08-09 20:50:22: [?] Loading avaiable scripts...
+2020-08-09 20:50:22: [?] Choose the script that you want use: 
+2020-08-09 20:50:22:  0) modes/cleverbot.js
+2020-08-09 20:50:22:  1) modes/mitm.js
+2020-08-09 20:50:25: [?] Loading cleverbot.js script!
+2020-08-09 20:50:25: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 20:50:27:  API server running on port 3001
+2020-08-09 20:50:27: [?] User connected to API Server
+2020-08-09 20:50:29: [?] Stranger connected to the server as: shard2:vi2kfxrmnj88homvf6n4dl82jqyv1q
+2020-08-09 20:50:29: [?] Stranger waiting for someone.
+2020-08-09 20:50:29: [+] Stranger connected to someone
+2020-08-09 20:50:32:  Stranger: Hiiiiiii
+2020-08-09 20:50:34:  Cleverbot: Co.
+2020-08-09 20:50:39:  Stranger: Co?
+2020-08-09 20:50:40:  Cleverbot: No ja się pytam co?
+2020-08-09 20:50:47:  Stranger: Sorry what?
+2020-08-09 20:50:49:  Cleverbot: Nothing.
+ 
+BOT RESTART
+
+2020-08-09 20:50:54: [?] Loading avaiable scripts...
+2020-08-09 20:50:54: [?] Choose the script that you want use: 
+2020-08-09 20:50:54:  0) modes/cleverbot.js
+2020-08-09 20:50:54:  1) modes/mitm.js
+2020-08-09 20:50:55: [?] Loading cleverbot.js script!
+2020-08-09 20:50:55: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 20:50:56:  API server running on port 3001
+2020-08-09 20:50:57: [?] User connected to API Server
+2020-08-09 20:50:58: [?] Stranger connected to the server as: shard2:jhmvrsvpicsp17nhoo2qyf8556h7gh
+2020-08-09 20:50:58: [?] Stranger waiting for someone.
+2020-08-09 20:50:59: [+] Stranger connected to someone
+2020-08-09 20:51:07:  Stranger: HeEeEy
+2020-08-09 20:51:09:  Cleverbot: What are you doing?
+ 
+BOT RESTART
+
+2020-08-09 20:52:42: [?] Loading avaiable scripts...
+2020-08-09 20:52:42: [?] Choose the script that you want use: 
+2020-08-09 20:52:42:  0) modes/cleverbot.js
+2020-08-09 20:52:42:  1) modes/mitm.js
+2020-08-09 20:52:43: [?] Loading cleverbot.js script!
+2020-08-09 20:52:43: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 20:52:45:  API server running on port 3001
+2020-08-09 20:52:46: [?] User connected to API Server
+2020-08-09 20:52:49: [?] Stranger connected to the server as: shard2:fzji47keex1f2attrqh2vkg9jccidk
+2020-08-09 20:52:49: [?] Stranger waiting for someone.
+2020-08-09 20:52:49: [+] Stranger connected to someone
+2020-08-09 20:52:50: [?] User connected to API Server
+2020-08-09 20:52:55: [?] Stranger connected to the server as: shard2:bx95qbk2t09on1vp2ghwzye5ygpgzd
+2020-08-09 20:52:55: [?] Stranger waiting for someone.
+2020-08-09 20:52:56:  Stranger: Hey
+2020-08-09 20:52:56: [+] Stranger connected to someone
+2020-08-09 20:52:58:  Cleverbot: How are you??
+2020-08-09 20:53:00:  Stranger: --*Yummy play Images.,., f>kIk> rworabal120
+2020-08-09 20:53:02:  Cleverbot: Don't play what?
+2020-08-09 20:53:03: [!] Stranger disconnected.
+ 
+BOT RESTART
+
+2020-08-09 20:53:23: [?] Loading avaiable scripts...
+2020-08-09 20:53:23: [?] Choose the script that you want use: 
+2020-08-09 20:53:23:  0) modes/cleverbot.js
+2020-08-09 20:53:23:  1) modes/mitm.js
+2020-08-09 20:53:25: [?] Loading cleverbot.js script!
+2020-08-09 20:53:25: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+ 
+BOT RESTART
+
+2020-08-09 20:53:34: [?] Loading avaiable scripts...
+2020-08-09 20:53:34: [?] Choose the script that you want use: 
+2020-08-09 20:53:34:  0) modes/cleverbot.js
+2020-08-09 20:53:34:  1) modes/mitm.js
+2020-08-09 20:53:34:  > 0
+2020-08-09 20:53:34: [?] Loading cleverbot.js script!
+2020-08-09 20:53:35: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 20:53:35:  > apiserver
+2020-08-09 20:53:35:  API server running on port 3001
+2020-08-09 20:53:36:  > find
+2020-08-09 20:53:38: [?] Stranger connected to the server as: shard2:mjp28gyhpuzucva5ex8mym7bv9ur2l
+2020-08-09 20:53:38: [?] Stranger waiting for someone.
+2020-08-09 20:53:39: [?] User connected to API Server
+2020-08-09 20:53:39: [+] Stranger connected to someone
+2020-08-09 20:53:43:  Stranger: Hi F19
+2020-08-09 20:53:45:  Cleverbot: Hello;).
+2020-08-09 20:53:50: [!] Stranger disconnected.
+ 
+BOT RESTART
+
+2020-08-09 20:54:04: [?] Loading avaiable scripts...
+2020-08-09 20:54:04: [?] Choose the script that you want use: 
+2020-08-09 20:54:04:  0) modes/cleverbot.js
+2020-08-09 20:54:04:  1) modes/mitm.js
+2020-08-09 20:54:04:  > 0
+2020-08-09 20:54:04: [?] Loading cleverbot.js script!
+2020-08-09 20:54:04: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 20:54:05:  > apiserver
+2020-08-09 20:54:05:  API server running on port 3001
+2020-08-09 20:54:05: [?] User connected to API Server
+2020-08-09 20:54:06:  > find
+2020-08-09 20:54:07: [?] Stranger connected to the server as: shard2:z75ughb8uukf1aob0f1vr5c4mos5ep
+2020-08-09 20:54:07: [?] Stranger waiting for someone.
+2020-08-09 20:54:08: [+] Stranger connected to someone
+2020-08-09 20:54:11:  Stranger: M
+2020-08-09 20:54:14:  Cleverbot: Ich bin ein Junge.
+2020-08-09 20:54:18: [!] Stranger disconnected.
+2020-08-09 20:55:08: [?] User connected to API Server
+2020-08-09 20:55:44: [?] User connected to API Server
+2020-08-09 20:56:18: [?] User connected to API Server
+2020-08-09 20:56:23: [?] User connected to API Server
+2020-08-09 20:57:26: [?] User connected to API Server
+2020-08-09 20:57:45: [?] User connected to API Server
+2020-08-09 20:58:02: [?] User connected to API Server
+2020-08-09 20:58:10: [?] User connected to API Server
+2020-08-09 20:58:37: [?] User connected to API Server
+2020-08-09 20:58:51: [?] User connected to API Server
+2020-08-09 21:00:17: [?] User connected to API Server
+2020-08-09 21:01:29: [?] User connected to API Server
+2020-08-09 21:01:40: [?] User connected to API Server
+2020-08-09 21:01:49: [?] User connected to API Server
+2020-08-09 21:01:57: [?] User connected to API Server
+2020-08-09 21:02:01: [?] User connected to API Server
+2020-08-09 21:02:21: [?] User connected to API Server
+2020-08-09 21:02:37: [?] User connected to API Server
+2020-08-09 21:02:40: [?] User connected to API Server
+2020-08-09 21:03:04: [?] User connected to API Server
+2020-08-09 21:03:11: [?] User connected to API Server
+2020-08-09 21:03:15: [?] User connected to API Server
+2020-08-09 21:03:18: [?] User connected to API Server
+2020-08-09 21:03:22: [?] User connected to API Server
+2020-08-09 21:03:27: [?] User connected to API Server
+2020-08-09 21:03:37: [?] User connected to API Server
+2020-08-09 21:04:48: [?] User connected to API Server
+2020-08-09 21:05:13: [?] User connected to API Server
+2020-08-09 21:05:16: [?] User connected to API Server
+2020-08-09 21:06:38: [?] User connected to API Server
+2020-08-09 21:07:21: [?] User connected to API Server
+2020-08-09 21:07:57: [?] User connected to API Server
+2020-08-09 21:10:06: [?] User connected to API Server
+2020-08-09 21:13:07: [?] User connected to API Server
+2020-08-09 21:13:32: [?] User connected to API Server
+2020-08-09 21:13:55: [?] User connected to API Server
+2020-08-09 21:14:33: [?] User connected to API Server
+2020-08-09 21:14:47: [?] User connected to API Server
+2020-08-09 21:15:10: [?] User connected to API Server
+2020-08-09 21:15:20: [?] User connected to API Server
+2020-08-09 21:15:22: [?] User connected to API Server
+2020-08-09 21:16:32: [?] User connected to API Server
+2020-08-09 21:16:37: [?] User connected to API Server
+2020-08-09 21:16:53: [?] User connected to API Server
+2020-08-09 21:18:00: [?] User connected to API Server
+2020-08-09 21:20:31: [?] User connected to API Server
+2020-08-09 21:20:57: [?] User connected to API Server
+2020-08-09 21:21:04: [?] User connected to API Server
+2020-08-09 21:21:19: [?] User connected to API Server
+2020-08-09 21:21:39: [?] User connected to API Server
+2020-08-09 21:22:14: [?] User connected to API Server
+2020-08-09 21:22:58: [?] User connected to API Server
+2020-08-09 21:23:00: [?] User connected to API Server
+2020-08-09 21:23:16: [?] User connected to API Server
+2020-08-09 21:23:37: [?] User connected to API Server
+2020-08-09 21:23:41: [?] User connected to API Server
+2020-08-09 21:23:52: [?] User connected to API Server
+2020-08-09 21:23:54: [?] User connected to API Server
+2020-08-09 21:23:58: [?] User connected to API Server
+2020-08-09 21:24:01: [?] User connected to API Server
+2020-08-09 21:24:14: [?] User connected to API Server
+2020-08-09 21:24:18: [?] User connected to API Server
+2020-08-09 21:25:26: [?] User connected to API Server
+2020-08-09 21:28:31: [?] User connected to API Server
+2020-08-09 21:28:42: [?] User connected to API Server
+2020-08-09 21:28:55: [?] User connected to API Server
+2020-08-09 21:29:02: [?] User connected to API Server
+2020-08-09 21:29:15: [?] User connected to API Server
+2020-08-09 21:29:32: [?] User connected to API Server
+2020-08-09 21:29:58: [?] User connected to API Server
+2020-08-09 21:30:07: [?] User connected to API Server
+2020-08-09 21:30:21: [?] User connected to API Server
+2020-08-09 21:30:56: [?] User connected to API Server
+2020-08-09 21:31:12: [?] User connected to API Server
+2020-08-09 21:31:21: [?] User connected to API Server
+2020-08-09 21:31:31: [?] User connected to API Server
+2020-08-09 21:32:49: [?] User connected to API Server
+2020-08-09 21:32:57: [?] User connected to API Server
+2020-08-09 21:33:25: [?] User connected to API Server
+2020-08-09 21:33:53: [?] User connected to API Server
+2020-08-09 21:34:34: [?] User connected to API Server
+2020-08-09 21:34:46: [?] User connected to API Server
+2020-08-09 21:35:04: [?] Stranger connected to the server as: shard2:s39k0mwg7y8xtinf1wax9615xo9bl7
+2020-08-09 21:35:04: [?] Stranger waiting for someone.
+2020-08-09 21:35:05: [+] Stranger connected to someone
+2020-08-09 21:35:16:  Stranger: f good images
+2020-08-09 21:35:17:  Cleverbot: There should be a question mark at the end of what you wrote.
+2020-08-09 21:35:26:  Stranger: "Pauline8748Rose"kik
+2020-08-09 21:35:27:  Cleverbot: Let's just be honest.
+2020-08-09 21:35:29: [!] Stranger disconnected.
+2020-08-09 21:35:43: [?] Automatic connect enabled
+2020-08-09 21:35:47: [?] Stranger connected to the server as: shard2:bjq3t0d4divw41ddodcxt45tc08nr5
+2020-08-09 21:35:47: [?] Stranger waiting for someone.
+2020-08-09 21:35:48: [+] Stranger connected to someone
+2020-08-09 21:35:52:  Stranger: hey
+2020-08-09 21:35:53:  Cleverbot: 'sup?
+2020-08-09 21:35:59: [!] Stranger disconnected.
+2020-08-09 21:36:00: [?] Stranger connected to the server as: shard2:4ql4mbzsr5nifqtj6cck7rs4b9bozm
+2020-08-09 21:36:00: [?] Stranger waiting for someone.
+2020-08-09 21:36:01: [+] Stranger connected to someone
+2020-08-09 21:36:04:  Stranger: Hi
+2020-08-09 21:36:05:  Cleverbot: How's it going? :).
+2020-08-09 21:36:15: [!] Stranger disconnected.
+2020-08-09 21:36:16: [?] Stranger connected to the server as: shard2:6zhv8xja05b6vxfxvh3m8l2nsrzt9k
+2020-08-09 21:36:16: [?] Stranger waiting for someone.
+2020-08-09 21:36:17: [+] Stranger connected to someone
+2020-08-09 21:36:20:  Stranger: Hi
+2020-08-09 21:36:21:  Cleverbot: Can I come in?
+2020-08-09 21:36:26: [?] User connected to API Server
+2020-08-09 21:36:30:  Stranger: You what
+2020-08-09 21:36:31:  Cleverbot: *takes a few steps back*.
+2020-08-09 21:36:45: [!] Stranger disconnected.
+2020-08-09 21:36:46: [?] Stranger connected to the server as: shard2:pctp22fek738rzb5im6ktxpust55b1
+2020-08-09 21:36:46: [?] Stranger waiting for someone.
+2020-08-09 21:36:47: [+] Stranger connected to someone
+2020-08-09 21:36:56:  Stranger:  >.Mmm play Photos❤💕 Fem,,kiK,, entarove440
+2020-08-09 21:36:57:  Cleverbot: Tak&.
+2020-08-09 21:37:04: [!] Stranger disconnected.
+2020-08-09 21:37:06: [?] Stranger connected to the server as: shard2:zxpn3n7bpy1kpfdmx76orb856x25gy
+2020-08-09 21:37:06: [?] Stranger waiting for someone.
+2020-08-09 21:37:07: [+] Stranger connected to someone
+2020-08-09 21:37:12:  Stranger: Girl/23yo,you? IG @Pinokna22
+2020-08-09 21:37:13:  Cleverbot: And I love my boyfriend.
+2020-08-09 21:38:20: [?] Stranger connected to the server as: shard2:l30gp7e3fhfe3rrktk8ejmed0958vy
+2020-08-09 21:38:20: [?] Stranger waiting for someone.
+2020-08-09 21:38:21: [+] Stranger connected to someone
+2020-08-09 21:38:25:  Stranger: F. I’m gonna make you come so hard you’ll never forget it.
+2020-08-09 21:38:26:  Cleverbot: I downloaded waste.
+2020-08-09 21:38:28:  Stranger: https://bit.ly/30XbAkY
+2020-08-09 21:38:30:  Cleverbot: What's that link for?
+2020-08-09 21:38:34: [!] Stranger disconnected.
+2020-08-09 21:38:35: [?] Stranger connected to the server as: shard2:22u7o4l3v5tkxlwerkmxntrbokov3o
+2020-08-09 21:38:35: [?] Stranger waiting for someone.
+2020-08-09 21:38:37: [+] Stranger connected to someone
+2020-08-09 21:38:40:  Stranger: <*welll play❤. female*kIk. avildroa177
+2020-08-09 21:38:43:  Cleverbot: A female.
+2020-08-09 21:38:44: [!] Stranger disconnected.
+2020-08-09 21:38:45: [?] Stranger connected to the server as: shard2:nw3czvxogchgjuga6f7ro8vfu478zv
+2020-08-09 21:38:45: [?] Stranger waiting for someone.
+2020-08-09 21:38:46: [+] Stranger connected to someone
+2020-08-09 21:38:49:  Stranger: F12
+2020-08-09 21:38:50:  Cleverbot: S.
+2020-08-09 21:38:51:  Stranger: Hi
+2020-08-09 21:38:53:  Cleverbot: How are you?
+2020-08-09 21:39:01:  Stranger: Ok hbu
+2020-08-09 21:39:02:  Cleverbot: Fine I guess.
+2020-08-09 21:39:11:  Stranger: What happened 
+2020-08-09 21:39:12:  Cleverbot: Nothing. It's just really hot.
+2020-08-09 21:39:20:  Stranger: U don’t have to talk about it
+2020-08-09 21:39:21: [?] User connected to API Server
+2020-08-09 21:39:21:  Cleverbot: Relativity.
+2020-08-09 21:39:39:  Stranger: R u m or f
+2020-08-09 21:39:42:  Cleverbot: Am.
+2020-08-09 21:39:54:  Stranger: Huh
+2020-08-09 21:39:55:  Cleverbot: I have no idea.
+2020-08-09 21:40:03:  Stranger: Ok I’m confused 
+2020-08-09 21:40:04:  Cleverbot: Why is that Sweetie?
+2020-08-09 21:40:18:  Stranger: UM EXCUSE ME
+2020-08-09 21:40:20:  Cleverbot: That is not my problem.
+2020-08-09 21:40:25:  Stranger: I ain’t u sweetie 
+2020-08-09 21:40:27:  Cleverbot: *gives you a huge kiss on lips*.
+2020-08-09 21:40:43:  Stranger: U creepy 
+2020-08-09 21:40:54:  Cleverbot: No, you are a creep.
+2020-08-09 21:41:06:  Stranger: No u called me sweetie 
+2020-08-09 21:41:07:  Cleverbot: Yep I did.
+2020-08-09 21:41:10: [!] Stranger disconnected.
+2020-08-09 21:41:11: [?] Stranger waiting for someone.
+2020-08-09 21:41:11: [?] Stranger connected to the server as: shard2:rxjzh7hg1aro0a5y9qssc4fqlbbwvq
+2020-08-09 21:41:12: [+] Stranger connected to someone
+2020-08-09 21:41:14:  Stranger: Hi
+2020-08-09 21:41:16:  Cleverbot: So, how are you?
+2020-08-09 21:41:22:  Stranger: I’m okay
+2020-08-09 21:41:24:  Cleverbot: Yes one of the best albums of the 80s!
+2020-08-09 21:41:39: [!] Stranger disconnected.
+2020-08-09 21:41:40: [?] Stranger connected to the server as: shard2:hvpfx15ihpr829takdax0sv6neadp6
+2020-08-09 21:41:40: [?] Stranger waiting for someone.
+2020-08-09 21:41:41: [+] Stranger connected to someone
+2020-08-09 21:41:43:  Stranger: M
+2020-08-09 21:41:44:  Cleverbot: Ik snap je niet.
+2020-08-09 21:41:52:  Stranger: Ok
+2020-08-09 21:41:54:  Cleverbot: So, what are you doing?
+2020-08-09 21:42:04:  Stranger: Jerking my cock
+2020-08-09 21:42:06:  Cleverbot: What acountry are you in?
+2020-08-09 21:42:09: [?] User connected to API Server
+2020-08-09 21:42:12:  Stranger: You?
+2020-08-09 21:42:13:  Cleverbot: Talking to you too.
+2020-08-09 21:42:21: [?] User connected to API Server
+2020-08-09 21:42:24:  Stranger: Ohhh
+2020-08-09 21:42:26:  Cleverbot: Do you like it?
+2020-08-09 21:42:30:  Stranger: I m from india
+2020-08-09 21:42:31:  Cleverbot: Cool.
+2020-08-09 21:42:33:  Stranger: Yeh
+2020-08-09 21:42:34:  Cleverbot: So, your name is Eve, right?
+2020-08-09 21:42:41:  Stranger: No
+2020-08-09 21:42:42:  Cleverbot: Why? I love you!
+2020-08-09 21:42:52:  Stranger: Suck my cock baby
+2020-08-09 21:42:54:  Cleverbot: Well, you got that one right...(sigh)..
+2020-08-09 21:43:09:  Stranger: Cock is ready for you
+2020-08-09 21:43:10:  Cleverbot: Ok, do you want kids or no kids.
+2020-08-09 21:43:22:  Stranger: No kids
+2020-08-09 21:43:24:  Cleverbot: Want kids?
+2020-08-09 21:43:29: [?] User connected to API Server
+2020-08-09 21:43:30:  Stranger: No
+2020-08-09 21:43:31:  Cleverbot: Am I bothering you because if you want I could leave.
+2020-08-09 21:43:45:  Stranger: Ohhh
+2020-08-09 21:43:46:  Cleverbot: What are you doing?
+2020-08-09 21:43:48:  Stranger: Ok
+2020-08-09 21:43:49:  Cleverbot: So what do you like to do?
+2020-08-09 21:43:58:  Stranger: Jerking my cock baby 
+2020-08-09 21:43:59:  Cleverbot: And Now I suffer the Curse and now i am blind.
+2020-08-09 21:44:05:  Stranger: I will love to fuck you
+2020-08-09 21:44:07:  Cleverbot: Aww that's so sweet.
+2020-08-09 21:44:25:  Stranger: Where are you from?
+2020-08-09 21:44:27:  Cleverbot: *pull you closer to me*.
+2020-08-09 21:44:57:  Stranger: Baby
+2020-08-09 21:44:58:  Cleverbot: And you? Are you looking for a relationship?
+2020-08-09 21:45:08:  Stranger: Tell me
+2020-08-09 21:45:10:  Cleverbot: Nooooo.
+2020-08-09 21:45:16:  Stranger: Why
+2020-08-09 21:45:17:  Cleverbot: I don't know it.
+2020-08-09 21:45:22:  Stranger: I m from india
+2020-08-09 21:45:23:  Cleverbot: Are you a Hindu?
+2020-08-09 21:45:32:  Stranger: Why
+2020-08-09 21:45:33:  Cleverbot: Because you don't want to tell me.
+2020-08-09 21:45:40: [?] User connected to API Server
+2020-08-09 21:45:41:  Stranger: Are you?
+2020-08-09 21:45:43:  Cleverbot: No. Answer my question.
+2020-08-09 21:45:50:  Stranger: First you 
+2020-08-09 21:45:51:  Cleverbot: Noooo.
+2020-08-09 21:45:55: [?] User connected to API Server
+2020-08-09 21:45:56:  Stranger: Then i will
+2020-08-09 21:45:57:  Cleverbot: Good, thank you.
+2020-08-09 21:46:04:  Stranger: Yeh
+2020-08-09 21:46:05:  Cleverbot: Alright, good luck. Bye.
+2020-08-09 21:46:12:  Stranger: Why
+2020-08-09 21:46:13:  Cleverbot: Because I like purple.
+2020-08-09 21:46:13: [?] User connected to API Server
+2020-08-09 21:46:20:  Stranger: Ohhh
+2020-08-09 21:46:21:  Cleverbot: Do you like it?
+2020-08-09 21:46:22:  Stranger: I m
+2020-08-09 21:46:23:  Cleverbot: What?
+2020-08-09 21:46:24:  Stranger: Baby
+2020-08-09 21:46:26:  Cleverbot: Yep. You are my babe.
+2020-08-09 21:46:28:  Stranger: Suck mh 
+2020-08-09 21:46:32:  Cleverbot: Now what is that?
+2020-08-09 21:46:39:  Stranger: My cock
+2020-08-09 21:46:41:  Cleverbot: What is your code?
+2020-08-09 21:46:54:  Stranger: Bye
+2020-08-09 21:46:55:  Cleverbot: I am leaving.
+2020-08-09 21:46:55:  You: https://prnt.sc/twt0n6
+2020-08-09 21:46:58: [!] Stranger disconnected.
+2020-08-09 21:46:59: [?] Stranger connected to the server as: shard2:nkd0s94n24xkpp64b45x0m2mz2kf8u
+2020-08-09 21:46:59: [?] Stranger waiting for someone.
+2020-08-09 21:47:00: [+] Stranger connected to someone
+2020-08-09 21:47:08:  Stranger: woman
+2020-08-09 21:47:09:  Cleverbot: And how old are you?
+2020-08-09 21:47:20: [!] Stranger disconnected.
+2020-08-09 21:47:21: [?] Stranger connected to the server as: shard2:ymyae903dhw8qbeax9okrnjxbdadef
+2020-08-09 21:47:21: [?] Stranger waiting for someone.
+2020-08-09 21:47:23: [+] Stranger connected to someone
+2020-08-09 21:47:26:  Stranger: Hi 
+2020-08-09 21:47:27:  Cleverbot: How are you?
+2020-08-09 21:47:37:  Stranger: Horny lol 
+2020-08-09 21:47:38:  Cleverbot: I like to use it.
+2020-08-09 21:47:47:  Stranger: Use?
+2020-08-09 21:47:48:  Cleverbot: Do you like soccer?
+2020-08-09 21:47:57:  Stranger: Ya
+2020-08-09 21:47:58:  Cleverbot: What do you want to talk about?
+2020-08-09 21:48:05:  Stranger: M
+2020-08-09 21:48:07:  Cleverbot: What have you done lately clever?
+2020-08-09 21:48:08: [?] User connected to API Server
+2020-08-09 21:48:11: [!] Stranger disconnected.
+2020-08-09 21:48:13: [?] Stranger waiting for someone.
+2020-08-09 21:48:13: [?] Stranger connected to the server as: shard2:9nmhhnll041bwj32lhq1ifme595c8t
+2020-08-09 21:48:14: [+] Stranger connected to someone
+2020-08-09 21:48:21:  You: test
+2020-08-09 21:48:55: [?] Stranger connected to the server as: shard2:ndu7whv1mn6arsykj0qf3cqsw3zsit
+2020-08-09 21:48:55: [?] Stranger waiting for someone.
+2020-08-09 21:48:56: [+] Stranger connected to someone
+2020-08-09 21:49:01:  Stranger: Hello 
+2020-08-09 21:49:02:  Cleverbot: What are you?
+2020-08-09 21:49:08:  Stranger: M
+2020-08-09 21:49:09:  Cleverbot: Do you want to be fattened up?
+2020-08-09 21:49:14: [!] Stranger disconnected.
+2020-08-09 21:49:15: [?] Stranger connected to the server as: shard2:qdicfru866xe3k1f2qsc7emtb24ooo
+2020-08-09 21:49:15: [?] Stranger waiting for someone.
+2020-08-09 21:49:16: [+] Stranger connected to someone
+2020-08-09 21:49:19:  Stranger: hi
+2020-08-09 21:49:20:  Cleverbot: Yes.
+2020-08-09 21:49:25:  Stranger: ?
+2020-08-09 21:49:26:  Cleverbot: Hey, best friend.
+2020-08-09 21:49:36:  Stranger: u ok?
+2020-08-09 21:49:37:  Cleverbot: Z tobą nawet 20.
+2020-08-09 21:49:44: [!] Stranger disconnected.
+2020-08-09 21:49:44: [?] Stranger connected to the server as: shard2:4rufi7cnpt6bfflv5ohjvmznxl1s0w
+2020-08-09 21:49:44: [?] Stranger waiting for someone.
+2020-08-09 21:49:45: [+] Stranger connected to someone
+2020-08-09 21:49:46:  Stranger: F. I’m gonna make you come so hard you’ll never forget it.
+2020-08-09 21:49:48:  Cleverbot: Ma duc afara sa vad daca esti la mine in curte.
+2020-08-09 21:49:49:  Stranger: https://bit.ly/39yzs2m
+2020-08-09 21:49:51:  Cleverbot: What's that link for?
+2020-08-09 21:49:52: [!] Stranger disconnected.
+2020-08-09 21:49:53: [?] Stranger connected to the server as: shard2:a89e3vl6h5gfmve1oc66j3uw2km6x9
+2020-08-09 21:49:53: [?] Stranger waiting for someone.
+2020-08-09 21:49:55: [+] Stranger connected to someone
+2020-08-09 21:49:58:  Stranger: Hi
+2020-08-09 21:49:59:  Cleverbot: How are you?
+2020-08-09 21:50:13:  Stranger: Fine, and u?
+2020-08-09 21:50:14:  Cleverbot: I already told you I was fine.
+2020-08-09 21:50:40:  Stranger: No, you didnt do that
+2020-08-09 21:50:41:  Cleverbot: Yes I did.
+2020-08-09 21:50:47: [!] Stranger disconnected.
+2020-08-09 21:50:48: [?] Stranger connected to the server as: shard2:5ahsiq5ayn6yg80z1g539lwo9t6uwf
+2020-08-09 21:50:48: [?] Stranger waiting for someone.
+2020-08-09 21:50:50: [+] Stranger connected to someone
+2020-08-09 21:50:53:  Stranger: Hey
+2020-08-09 21:50:54:  Cleverbot: What's up?
+2020-08-09 21:50:57:  Stranger: M or f
+2020-08-09 21:50:58:  Cleverbot: C (for computer).
+2020-08-09 21:51:08:  Stranger: Horny
+2020-08-09 21:51:09:  Cleverbot: *pets dragon girls tail*.
+2020-08-09 21:51:17: [!] Stranger disconnected.
+2020-08-09 21:51:18: [?] Stranger connected to the server as: shard2:x83ezo3beoqpesictp7e3l5va4087d
+2020-08-09 21:51:18: [?] Stranger waiting for someone.
+2020-08-09 21:51:20: [+] Stranger connected to someone
+2020-08-09 21:51:30:  Stranger: hi
+2020-08-09 21:51:32:  Cleverbot: How are you today?
+2020-08-09 21:51:35: [!] Stranger disconnected.
+2020-08-09 21:51:36: [?] Stranger connected to the server as: shard2:5to7ocy3squkxdn6ypn3iz0vzndode
+2020-08-09 21:51:36: [?] Stranger waiting for someone.
+2020-08-09 21:51:37: [+] Stranger connected to someone
+2020-08-09 21:51:43:  Stranger: F21,you? Inst~agram @Pinokna22
+2020-08-09 21:51:45:  Cleverbot: No. Do you?
+2020-08-09 21:55:04: [!] Stranger disconnected.
+2020-08-09 21:55:05: [?] Stranger connected to the server as: shard2:2by75jvfibguhxf7y1q921j6b6cobb
+2020-08-09 21:55:05: [?] Stranger waiting for someone.
+2020-08-09 21:55:06: [+] Stranger connected to someone
+2020-08-09 21:55:21:  Stranger: F
+2020-08-09 21:55:22:  Cleverbot: So you are female?
+2020-08-09 21:55:38:  Stranger: 20 snapchat aitanascott2020
+2020-08-09 21:55:40:  Cleverbot: Je comprent rien a ton charabia.
+2020-08-09 21:55:43: [!] Stranger disconnected.
+2020-08-09 21:55:44: [?] Stranger connected to the server as: shard2:vcw08yq0o15spoiopsjnc62r2ocgiv
+2020-08-09 21:55:44: [?] Stranger waiting for someone.
+2020-08-09 21:55:45: [+] Stranger connected to someone
+2020-08-09 21:55:51:  Stranger: F. I’m gonna make you come so hard you’ll never forget it.
+ 
+BOT RESTART
+
+2020-08-09 21:55:52: [?] Loading avaiable scripts...
+2020-08-09 21:55:52: [?] Choose the script that you want use: 
+2020-08-09 21:55:52:  0) modes/cleverbot.js
+2020-08-09 21:55:52:  1) modes/mitm.js
+2020-08-09 21:55:52:  > 0
+2020-08-09 21:55:52: [?] Loading cleverbot.js script!
+2020-08-09 21:55:53: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 21:55:53:  > apiserver
+2020-08-09 21:55:53:  API server running on port 3001
+2020-08-09 21:55:54: [?] User connected to API Server
+2020-08-09 21:55:54:  > find
+2020-08-09 21:55:55: [?] Stranger connected to the server as: shard2:gmv85kofq1ta292tmzyu86lc1ewf8g
+2020-08-09 21:55:55: [?] Stranger waiting for someone.
+2020-08-09 21:55:57: [+] Stranger connected to someone
+2020-08-09 21:56:00:  Stranger: F. Make me moan all night long.
+2020-08-09 21:56:00: [?] User connected to API Server
+2020-08-09 21:56:02:  Cleverbot: Donkry.
+2020-08-09 21:56:03: [?] User connected to API Server
+2020-08-09 21:56:04:  Stranger: https://bit.ly/32ZI7cH
+2020-08-09 21:56:05:  Cleverbot: What's that link for?
+2020-08-09 21:56:06: [?] User connected to API Server
+2020-08-09 21:56:08: [!] Stranger disconnected.
