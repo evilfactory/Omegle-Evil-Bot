@@ -141,9 +141,7 @@ function createConsoleInputManager(){
 
 consoleInputManager = new createConsoleInputManager()
 
-var processArgs = process.argv.slice(2).join(" ").split(";");
-
-console.log(processArgs)
+var processArgs = process.argv.slice(2).join(" ").split(",");
 
 function do_stuff_because_im_sad(i){
     setTimeout(function(){
