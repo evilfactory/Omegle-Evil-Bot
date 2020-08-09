@@ -130,7 +130,7 @@ stranger.on("message", function (msg) {
     })
 })
 
-rl.on("line", function (msg) {
+consoleInputManager.on(function (msg) {
     var args = msg.split(" ")
     var command = args.shift().toLowerCase()
     var joinArg = args.join(" ")

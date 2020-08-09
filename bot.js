@@ -9,6 +9,7 @@ rl = readline.createInterface({
 });
 
 
+
 //var oldLog = console.log
 
 //console.log = function(a){
@@ -116,6 +117,45 @@ function createStranger(name, autoconnect = false, language = "en") {
 
 }
 
+function createConsoleInputManager(){
+    var _this = this
+    this.events = []
+
+    rl.on('line', (msg) => {
+        for(var i in _this.events){
+            _this.events[i](msg)
+        }
+    })
+
+    this.simulateInput = function(input){
+        logger.log("> " + input)
+        for(var i in _this.events){
+            _this.events[i](input)
+        }
+    }
+
+    this.on = function(func){
+        _this.events.push(func)
+    }
+}
+
+consoleInputManager = new createConsoleInputManager()
+
+var processArgs = process.argv.slice(2).join(" ").split(";");
+
+console.log(processArgs)
+
+function do_stuff_because_im_sad(i){
+    setTimeout(function(){
+        consoleInputManager.simulateInput(processArgs[i])
+    }, (i+1) * 100)
+}
+
+if(processArgs[0] != ''){
+    for(var i in processArgs){
+        do_stuff_because_im_sad(i)
+    }
+}
 
 var modeList = []
 var stillChoosingScript = true
@@ -142,7 +182,7 @@ function ready() {
         logger.log(file + ") " + modeList[file], logger.logMagenta)
     }
 
-    rl.on('line', (msg) => {
+    consoleInputManager.on((msg) => {
         var args = msg.split(" ")
         var command = args.shift().toLowerCase()
 

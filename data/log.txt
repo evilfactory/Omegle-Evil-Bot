@@ -851,3 +851,265 @@ BOT RESTART
 2020-08-09 18:49:51:  0) modes/cleverbot.js
 2020-08-09 18:49:51:  1) modes/mitm.js
 2020-08-09 18:49:53: [ERROR] This module is still in development
+ 
+BOT RESTART
+
+2020-08-09 19:03:19: [?] Loading avaiable scripts...
+2020-08-09 19:03:19: [?] Choose the script that you want use: 
+2020-08-09 19:03:20:  0) modes/cleverbot.js
+2020-08-09 19:03:20:  1) modes/mitm.js
+2020-08-09 19:03:22: [?] Loading cleverbot.js script!
+2020-08-09 19:03:22: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 19:03:31: [?] Cleverbot enabled
+ 
+BOT RESTART
+
+2020-08-09 19:15:44: [?] Loading avaiable scripts...
+2020-08-09 19:15:44: [?] Choose the script that you want use: 
+2020-08-09 19:15:44:  0) modes/cleverbot.js
+2020-08-09 19:15:44:  1) modes/mitm.js
+ 
+BOT RESTART
+
+2020-08-09 19:15:47: [?] Loading avaiable scripts...
+2020-08-09 19:15:47: [?] Choose the script that you want use: 
+2020-08-09 19:15:47:  0) modes/cleverbot.js
+2020-08-09 19:15:47:  1) modes/mitm.js
+ 
+BOT RESTART
+
+2020-08-09 19:15:50: [?] Loading avaiable scripts...
+2020-08-09 19:15:50: [?] Choose the script that you want use: 
+2020-08-09 19:15:50:  0) modes/cleverbot.js
+2020-08-09 19:15:50:  1) modes/mitm.js
+ 
+BOT RESTART
+
+2020-08-09 19:15:53: [?] Loading avaiable scripts...
+2020-08-09 19:15:53: [?] Choose the script that you want use: 
+2020-08-09 19:15:53:  0) modes/cleverbot.js
+2020-08-09 19:15:53:  1) modes/mitm.js
+ 
+BOT RESTART
+
+2020-08-09 19:18:20:  >0
+2020-08-09 19:18:20: [?] Loading avaiable scripts...
+2020-08-09 19:18:20: [?] Choose the script that you want use: 
+2020-08-09 19:18:20:  0) modes/cleverbot.js
+2020-08-09 19:18:21:  1) modes/mitm.js
+ 
+BOT RESTART
+
+2020-08-09 19:18:38:  > 0
+2020-08-09 19:18:38: [?] Loading avaiable scripts...
+2020-08-09 19:18:38: [?] Choose the script that you want use: 
+2020-08-09 19:18:38:  0) modes/cleverbot.js
+2020-08-09 19:18:38:  1) modes/mitm.js
+ 
+BOT RESTART
+
+2020-08-09 19:18:53: [?] Loading avaiable scripts...
+2020-08-09 19:18:53: [?] Choose the script that you want use: 
+2020-08-09 19:18:53:  0) modes/cleverbot.js
+2020-08-09 19:18:53:  1) modes/mitm.js
+2020-08-09 19:18:54:  > 0
+2020-08-09 19:18:54: [?] Loading cleverbot.js script!
+2020-08-09 19:18:55: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'cleverbot 0/1' to disable/enable cleverbot
+ 
+BOT RESTART
+
+2020-08-09 19:19:26: [?] Loading avaiable scripts...
+2020-08-09 19:19:26: [?] Choose the script that you want use: 
+2020-08-09 19:19:26:  0) modes/cleverbot.js
+2020-08-09 19:19:26:  1) modes/mitm.js
+2020-08-09 19:19:27:  > autoconnect 1
+2020-08-09 19:19:27: [!] Not found
+ 
+BOT RESTART
+
+2020-08-09 19:19:48: [?] Loading avaiable scripts...
+2020-08-09 19:19:48: [?] Choose the script that you want use: 
+2020-08-09 19:19:48:  0) modes/cleverbot.js
+2020-08-09 19:19:48:  1) modes/mitm.js
+2020-08-09 19:19:49:  > autoconnect 1
+2020-08-09 19:19:49: [!] Not found
+ 
+BOT RESTART
+
+2020-08-09 19:20:31: [?] Loading avaiable scripts...
+2020-08-09 19:20:31: [?] Choose the script that you want use: 
+2020-08-09 19:20:31:  0) modes/cleverbot.js
+2020-08-09 19:20:31:  1) modes/mitm.js
+2020-08-09 19:20:33:  > 0
+2020-08-09 19:20:33: [?] Loading cleverbot.js script!
+2020-08-09 19:20:33: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 19:20:34:  > 0
+2020-08-09 19:20:35:  > 0
+ 
+BOT RESTART
+
+2020-08-09 19:21:03: [?] Loading avaiable scripts...
+2020-08-09 19:21:03: [?] Choose the script that you want use: 
+2020-08-09 19:21:03:  0) modes/cleverbot.js
+2020-08-09 19:21:03:  1) modes/mitm.js
+2020-08-09 19:21:05:  > 0
+2020-08-09 19:21:05: [?] Loading cleverbot.js script!
+2020-08-09 19:21:05: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 19:21:06:  > 0
+ 
+BOT RESTART
+
+2020-08-09 19:21:38: [?] Loading avaiable scripts...
+2020-08-09 19:21:38: [?] Choose the script that you want use: 
+2020-08-09 19:21:38:  0) modes/cleverbot.js
+2020-08-09 19:21:38:  1) modes/mitm.js
+ 
+BOT RESTART
+
+2020-08-09 19:22:04: [?] Loading avaiable scripts...
+2020-08-09 19:22:04: [?] Choose the script that you want use: 
+2020-08-09 19:22:04:  0) modes/cleverbot.js
+2020-08-09 19:22:04:  1) modes/mitm.js
+2020-08-09 19:22:05:  > 0
+2020-08-09 19:22:05: [?] Loading cleverbot.js script!
+2020-08-09 19:22:05: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 19:22:15:  > 0
+2020-08-09 19:22:25:  > 0
+ 
+BOT RESTART
+
+2020-08-09 19:23:08: [?] Loading avaiable scripts...
+2020-08-09 19:23:08: [?] Choose the script that you want use: 
+2020-08-09 19:23:08:  0) modes/cleverbot.js
+2020-08-09 19:23:08:  1) modes/mitm.js
+2020-08-09 19:23:09:  > 0
+2020-08-09 19:23:09: [?] Loading cleverbot.js script!
+2020-08-09 19:23:10: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 19:23:19:  > 0
+ 
+BOT RESTART
+
+2020-08-09 19:23:26: [?] Loading avaiable scripts...
+2020-08-09 19:23:26: [?] Choose the script that you want use: 
+2020-08-09 19:23:26:  0) modes/cleverbot.js
+2020-08-09 19:23:26:  1) modes/mitm.js
+2020-08-09 19:23:27:  > 0
+2020-08-09 19:23:27: [?] Loading cleverbot.js script!
+2020-08-09 19:23:27: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 19:23:32:  > 0
+2020-08-09 19:23:37:  > 0
+ 
+BOT RESTART
+
+2020-08-09 19:25:01:  > autoconnect 1
+2020-08-09 19:25:01:  > autoquit 70
+2020-08-09 19:25:01:  > 0
+2020-08-09 19:25:01: [?] Loading avaiable scripts...
+2020-08-09 19:25:01: [?] Choose the script that you want use: 
+2020-08-09 19:25:01:  0) modes/cleverbot.js
+2020-08-09 19:25:01:  1) modes/mitm.js
+ 
+BOT RESTART
+
+2020-08-09 19:26:57: [?] Loading avaiable scripts...
+2020-08-09 19:26:57: [?] Choose the script that you want use: 
+2020-08-09 19:26:57:  0) modes/cleverbot.js
+2020-08-09 19:26:57:  1) modes/mitm.js
+2020-08-09 19:26:58:  > autoconnect 1
+2020-08-09 19:26:58: [!] Not found
+ 
+BOT RESTART
+
+2020-08-09 19:27:04: [?] Loading avaiable scripts...
+2020-08-09 19:27:04: [?] Choose the script that you want use: 
+2020-08-09 19:27:04:  0) modes/cleverbot.js
+2020-08-09 19:27:04:  1) modes/mitm.js
+2020-08-09 19:27:04:  > 0
+2020-08-09 19:27:04: [?] Loading cleverbot.js script!
+2020-08-09 19:27:04: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 19:27:09:  > autoquit 70
+2020-08-09 19:27:09: [?] Autoquit time set to 70
+2020-08-09 19:27:14:  > autoconnect 1
+2020-08-09 19:27:14: [?] Automatic connect enabled
+ 
+BOT RESTART
+
+2020-08-09 19:27:23: [?] Loading avaiable scripts...
+2020-08-09 19:27:23: [?] Choose the script that you want use: 
+2020-08-09 19:27:23:  0) modes/cleverbot.js
+2020-08-09 19:27:23:  1) modes/mitm.js
+2020-08-09 19:27:23:  > 0
+2020-08-09 19:27:23: [?] Loading cleverbot.js script!
+2020-08-09 19:27:23: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 19:27:28:  > autoquit 70
+2020-08-09 19:27:28: [?] Autoquit time set to 70
+ 
+BOT RESTART
+
+2020-08-09 19:27:33: [?] Loading avaiable scripts...
+2020-08-09 19:27:33: [?] Choose the script that you want use: 
+2020-08-09 19:27:33:  0) modes/cleverbot.js
+2020-08-09 19:27:33:  1) modes/mitm.js
+2020-08-09 19:27:33:  > 0
+2020-08-09 19:27:33: [?] Loading cleverbot.js script!
+2020-08-09 19:27:33: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-09 19:27:34:  > autoquit 70
+2020-08-09 19:27:34: [?] Autoquit time set to 70
+2020-08-09 19:27:35:  > autoconnect 1
+2020-08-09 19:27:35: [?] Automatic connect enabled
+2020-08-09 19:27:36:  > find
+2020-08-09 19:27:36: [?] stranger connected to the server as: shard2:gs41ir521a6ov5bj9uwbddqvocdjxd
+2020-08-09 19:27:36: [?] stranger waiting for someone.
+2020-08-09 19:27:37: [+] stranger connected to someone
+2020-08-09 19:27:45:  stranger: alright play Images💦 f>kIk^ dandiani638
+2020-08-09 19:27:48:  Cleverbot: No problem.
