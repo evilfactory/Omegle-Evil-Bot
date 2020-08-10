@@ -123,7 +123,7 @@ setInterval(function(){
         timetoquit = autoquit
         stranger.connect()
     }
-}, 900000)
+}, 1000)
 
 stranger.on("gotID", function(){
     timetoquit = autoquit
@@ -143,7 +143,7 @@ stranger.on("disconnected", function(){
 stranger.on("recaptchaRequired", function(){
     setTimeout(function(){
         stranger.connect()
-    }, 5000)
+    }, 900000)
 })
 
 stranger.on("message", function (msg) {
