@@ -80,7 +80,7 @@ function sendToAPIServer(name, msg){
     io.emit("msg", {name: name, msg: filterText(msg)})
     APIServerMessageList.push({name: name, msg: filterText(msg)})
 
-    if(APIServerMessageList.length > 25){
+    if(APIServerMessageList.length > 50){
         APIServerMessageList.splice(0,1)
     }
 }
@@ -119,10 +119,11 @@ setInterval(function(){
 
     if(timetoquit <= 0){
         logger.log("Stranger is afk, quitting", logger.logWarn)
+        sendToAPIServer("SERVER", "Stranger is afk, quitting")
         timetoquit = autoquit
         stranger.connect()
     }
-}, 1000)
+}, 900000)
 
 stranger.on("gotID", function(){
     timetoquit = autoquit
@@ -137,6 +138,12 @@ stranger.on("connected", function(){
 
 stranger.on("disconnected", function(){
     sendToAPIServer("SERVER", "Stranger disconnected")
+})
+
+stranger.on("recaptchaRequired", function(){
+    setTimeout(function(){
+        stranger.connect()
+    }, 5000)
 })
 
 stranger.on("message", function (msg) {

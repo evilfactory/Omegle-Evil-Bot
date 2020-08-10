@@ -71,6 +71,11 @@ function createStranger(name, autoconnect = false, language = "en") {
         _this.emit("connected")
     });
 
+    this.om.on('recaptchaRequired', function (link) {
+        logger.log(_this.name + ' Requires recaptcha: ' + link, logger.logWarn)
+        _this.emit("recaptchaRequired", link)
+    });
+
     this.om.on('gotMessage', function (msg) {
         logger.log(_this.name + ': ' + msg, logger.logMessage1)
         _this.emit("message", msg)

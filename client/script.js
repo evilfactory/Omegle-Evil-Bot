@@ -15,7 +15,6 @@ socket.on("msg", function (data) {
     console.log(data)
 })
 
-
 function addmsg(data) {
     var color = { r: 255, g: 255, b: 255 }
     var name = data.name.toLowerCase()

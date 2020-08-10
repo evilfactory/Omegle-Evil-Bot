@@ -169,7 +169,7 @@ var Omegle = function () {
 	};
 	var evalCaptcha = function (pchallengeLink) {
 		//recaptcha2 requires client side includes to work, provide the end user with the challenge so they may embed the google code passing the site_key as this challenge
-		this.emit('recaptchaRequired', pchallengeLink);
+		_this.emit('recaptchaRequired', pchallengeLink);
 	};
 	this.reloadReCAPTCHA = function () {
 		if (challengeLink) evalCaptcha(challengeLink);

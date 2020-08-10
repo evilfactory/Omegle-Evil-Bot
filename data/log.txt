@@ -2679,3 +2679,95 @@ BOT RESTART
 2020-08-09 23:13:03:  API server running on port 3007
 2020-08-09 23:13:03: [?] User connected to API Server
 2020-08-09 23:13:10: [?] User connected to API Server
+ 
+BOT RESTART
+
+2020-08-10 00:18:24: [?] Loading avaiable scripts...
+2020-08-10 00:18:24: [?] Choose the script that you want use: 
+2020-08-10 00:18:24:  0) modes/cleverbot.js
+2020-08-10 00:18:24:  1) modes/mitm.js
+2020-08-10 00:18:26: [?] Loading cleverbot.js script!
+2020-08-10 00:18:26: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-10 00:18:29: [?] Stranger connected to the server as: shard2:oenjj40g51r6s5p6vmrddowy4d6hum
+ 
+BOT RESTART
+
+2020-08-10 00:19:30: [?] Loading avaiable scripts...
+2020-08-10 00:19:30: [?] Choose the script that you want use: 
+2020-08-10 00:19:30:  0) modes/cleverbot.js
+2020-08-10 00:19:30:  1) modes/mitm.js
+2020-08-10 00:19:32: [?] Loading cleverbot.js script!
+2020-08-10 00:19:32: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-10 00:19:34: [?] Stranger connected to the server as: shard2:fxpzyb5jzauwdsdh5jjcppuvkrem73
+ 
+BOT RESTART
+
+2020-08-10 00:22:30: [?] Loading avaiable scripts...
+2020-08-10 00:22:30: [?] Choose the script that you want use: 
+2020-08-10 00:22:30:  0) modes/cleverbot.js
+2020-08-10 00:22:30:  1) modes/mitm.js
+ 
+BOT RESTART
+
+2020-08-10 00:22:37: [?] Loading avaiable scripts...
+2020-08-10 00:22:37: [?] Choose the script that you want use: 
+2020-08-10 00:22:37:  0) modes/cleverbot.js
+2020-08-10 00:22:37:  1) modes/mitm.js
+2020-08-10 00:22:38: [?] Loading cleverbot.js script!
+2020-08-10 00:22:38: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-10 00:22:45: [?] Stranger connected to the server as: shard2:2omdndhjc974i8547qflgzvzpzpn09
+2020-08-10 00:22:45: [!] Stranger Requires recaptcha: 6LekMVAUAAAAAPDp1Cn7YMzjZynSb9csmX5V4a9P
+ 
+BOT RESTART
+
+2020-08-10 00:30:47: [?] Loading avaiable scripts...
+2020-08-10 00:30:47: [?] Choose the script that you want use: 
+2020-08-10 00:30:47:  0) modes/cleverbot.js
+2020-08-10 00:30:47:  1) modes/mitm.js
+2020-08-10 00:30:54: [?] Loading cleverbot.js script!
+2020-08-10 00:30:55: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-10 00:30:57: [?] Stranger connected to the server as: shard2:tpfljzn0il90v2k474k00gdrc0ut4f
+2020-08-10 00:30:57: [!] Stranger Requires recaptcha: 6LekMVAUAAAAAPDp1Cn7YMzjZynSb9csmX5V4a9P
+ 
+BOT RESTART
+
+2020-08-10 00:33:39: [?] Loading avaiable scripts...
+2020-08-10 00:33:39: [?] Choose the script that you want use: 
+2020-08-10 00:33:39:  0) modes/cleverbot.js
+2020-08-10 00:33:39:  1) modes/mitm.js
+2020-08-10 00:33:40: [?] Loading cleverbot.js script!
+2020-08-10 00:33:40: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-10 00:33:43: [?] Stranger connected to the server as: shard2:qb9hoo5kw5cc921xrfp8gmkn5u1892
+2020-08-10 00:33:43: [!] Stranger Requires recaptcha: 6LekMVAUAAAAAPDp1Cn7YMzjZynSb9csmX5V4a9P
+2020-08-10 00:33:49: [?] Stranger connected to the server as: shard2:syln904qktafdbtcax6p2q3foofbwv
+2020-08-10 00:33:49: [!] Stranger Requires recaptcha: 6LekMVAUAAAAAPDp1Cn7YMzjZynSb9csmX5V4a9P
