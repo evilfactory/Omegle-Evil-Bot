@@ -87,7 +87,7 @@ function createStranger(name, autoconnect = false, language = "en") {
         _this.emit("disconnected")
 
         if (_this.autoconnect) {
-            setTimedout(function(){
+            setTimeout(function(){
                 _this.om.connect()
             }, 1500)
         }
