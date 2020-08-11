@@ -69,33 +69,33 @@ function pushMessageToDatabase(name, msg) {
     saveDatabase()
 }
 
-function filterText(text){
+function filterText(text) {
     return text.replace(/[^\x00-\x7F]/g, "")
 }
 
 var APIServerMessageList = []
 
-function sendToAPIServer(name, msg){
-    if(!io){return}
-    io.emit("msg", {name: name, msg: filterText(msg)})
-    APIServerMessageList.push({name: name, msg: filterText(msg)})
+function sendToAPIServer(name, msg) {
+    if (!apiserverIO) { return }
+    apiserverIO.emit("msg", { name: name, msg: filterText(msg) })
+    APIServerMessageList.push({ name: name, msg: filterText(msg) })
 
-    if(APIServerMessageList.length > 50){
-        APIServerMessageList.splice(0,1)
+    if (APIServerMessageList.length > 50) {
+        APIServerMessageList.splice(0, 1)
     }
 }
 
-function runAPIServer(){
+function runAPIServer() {
 
     logger.log("API server running on port 3007")
 
-    io = require("socket.io")(3007)
+    apiserverIO = require("socket.io")(3007)
 
-    io.on('connection', function(socket){
+    apiserverIO.on('connection', function (socket) {
         socket.emit("datafromserver", APIServerMessageList)
 
         logger.log("User connected to API Server", logger.logInfo);
-        
+
     })
 }
 
@@ -108,16 +108,17 @@ var cleverbotEnabled = true
 var question = false
 var timetoquit = 0
 var autoquit = -1
+var apiserverIO;
 
 var currentQuestion = ""
 
-setInterval(function(){
-    if(autoquit < 0){return}
-    if(!stranger.om.connected()){return}
+setInterval(function () {
+    if (autoquit < 0) { return }
+    if (!stranger.om.connected()) { return }
 
     timetoquit = timetoquit - 1
 
-    if(timetoquit <= 0){
+    if (timetoquit <= 0) {
         logger.log("Stranger is afk, quitting", logger.logWarn)
         sendToAPIServer("SERVER", "Stranger is afk, quitting")
         timetoquit = autoquit
@@ -125,23 +126,23 @@ setInterval(function(){
     }
 }, 1000)
 
-stranger.on("gotID", function(){
+stranger.on("gotID", function () {
     timetoquit = autoquit
 })
 
-stranger.on("connected", function(){
+stranger.on("connected", function () {
     context = []
     pushNewConversation(stranger.om.language)
 
     sendToAPIServer("SERVER", "Connected to a stranger")
 })
 
-stranger.on("disconnected", function(){
+stranger.on("disconnected", function () {
     sendToAPIServer("SERVER", "Stranger disconnected")
 })
 
-stranger.on("recaptchaRequired", function(){
-    setTimeout(function(){
+stranger.on("recaptchaRequired", function () {
+    setTimeout(function () {
         stranger.connect()
     }, 900000)
 })
@@ -163,13 +164,17 @@ stranger.on("message", function (msg) {
             currentQuestion = response
         } else {
 
-            logger.log("Cleverbot: " + response, logger.logMessage2)
-            pushMessageToDatabase("Cleverbot", response)
-            stranger.sendMessage(response)
+            setTimeout(function () {
 
-            context.push(response)
+                logger.log("Cleverbot: " + response, logger.logMessage2)
+                pushMessageToDatabase("Cleverbot", response)
+                stranger.sendMessage(response)
 
-            stranger.stopTyping()
+                context.push(response)
+
+                stranger.stopTyping()
+
+            }, response.length * 50)
         }
     })
 })
@@ -183,8 +188,8 @@ consoleInputManager.on(function (msg) {
         stranger.connect()
     }
 
-    if(command == "y"){
-        if(currentQuestion == ""){return}
+    if (command == "y") {
+        if (currentQuestion == "") { return }
 
         logger.log("Cleverbot: " + currentQuestion, logger.logMessage2)
         pushMessageToDatabase("Cleverbot", currentQuestion)
@@ -197,7 +202,7 @@ consoleInputManager.on(function (msg) {
         currentQuestion = ""
     }
 
-    if(command == "n"){
+    if (command == "n") {
         currentQuestion = ""
     }
 
@@ -246,22 +251,22 @@ consoleInputManager.on(function (msg) {
         timetoquit = autoquit
     }
 
-    if(command == "apiserver"){
+    if (command == "apiserver") {
         runAPIServer()
     }
 })
 
 
-loadDatabase(function(){
+loadDatabase(function () {
 
     logger.log("Type 'find' to connect a stranger\n" +
-    "'say text' to send something to the stranger\n" +
-    "'autoconnect 0/1' to connect automatically\n" +
-    "'question 0/1' to question cleverbot responses\n" +
-    "'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)\n" +
-    "'apiserver' starts api server\n" +
-    "'cleverbot 0/1' to disable/enable cleverbot", logger.logInfo)
+        "'say text' to send something to the stranger\n" +
+        "'autoconnect 0/1' to connect automatically\n" +
+        "'question 0/1' to question cleverbot responses\n" +
+        "'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)\n" +
+        "'apiserver' starts api server\n" +
+        "'cleverbot 0/1' to disable/enable cleverbot", logger.logInfo)
 
-    ready=true
+    ready = true
 })
 
