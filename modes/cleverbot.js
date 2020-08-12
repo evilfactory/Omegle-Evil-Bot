@@ -75,7 +75,7 @@ function filterText(text) {
     return text
 }
 
-var APIServerMessageList = [{name: "SERVER", msg: "😅"}]
+var APIServerMessageList = []
 
 function sendToAPIServer(name, msg) {
     if (!apiserverIO) { return }
@@ -95,6 +95,7 @@ function runAPIServer() {
 
     apiserverIO.on('connection', function (socket) {
         socket.emit("datafromserver", APIServerMessageList)
+        socket.emit("msg", {name: "SERVER", msg: "Language is set to " + stranger.om.language})
 
         logger.log("User connected to API Server", logger.logInfo);
 

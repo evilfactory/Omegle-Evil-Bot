@@ -112,17 +112,19 @@ $isgood = isset($_GET['d']);
         }
 
         if ($isgood) {
-            $index = -1;
+            $index = 0;
+            $desired = -1;
 
             foreach ($database as $dat) {
                 if ($dat['date'] == $_GET['d']) {
+                    $desired = $index;
                     break;
                 }
 
                 $index = $index + 1;
             }
 
-            if($index == -1){
+            if($desired == -1){
                 exit;
             }
 

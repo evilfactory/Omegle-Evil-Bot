@@ -3188,3 +3188,53 @@ BOT RESTART
 2020-08-11 22:20:27:  1) modes/database_explorer_server.js
 2020-08-11 22:20:27:  2) modes/mitm.js
 2020-08-11 22:20:27:  > 1
+ 
+BOT RESTART
+
+2020-08-12 00:44:57: [?] Loading avaiable scripts...
+2020-08-12 00:44:57: [?] Choose the script that you want use: 
+2020-08-12 00:44:57:  0) modes/cleverbot.js
+2020-08-12 00:44:57:  1) modes/mitm.js
+2020-08-12 00:44:57:  > 1
+2020-08-12 00:44:57: [ERROR] This module is still in development
+ 
+BOT RESTART
+
+2020-08-12 00:44:59: [?] Loading avaiable scripts...
+2020-08-12 00:44:59: [?] Choose the script that you want use: 
+2020-08-12 00:44:59:  0) modes/cleverbot.js
+2020-08-12 00:44:59:  1) modes/mitm.js
+2020-08-12 00:44:59:  > 0
+2020-08-12 00:44:59: [?] Loading cleverbot.js script!
+2020-08-12 00:45:00: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-12 00:45:02:  API server running on port 3007
+2020-08-12 00:45:05: [?] User connected to API Server
+2020-08-12 00:45:41: [?] User connected to API Server
+2020-08-12 00:45:42: [?] User connected to API Server
+ 
+BOT RESTART
+
+2020-08-12 00:45:45: [?] Loading avaiable scripts...
+2020-08-12 00:45:45: [?] Choose the script that you want use: 
+2020-08-12 00:45:45:  0) modes/cleverbot.js
+2020-08-12 00:45:45:  1) modes/mitm.js
+2020-08-12 00:45:45:  > 0
+2020-08-12 00:45:45: [?] Loading cleverbot.js script!
+2020-08-12 00:45:45: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-12 00:45:47:  API server running on port 3007
+2020-08-12 00:45:47: [?] User connected to API Server
+2020-08-12 00:45:49: [?] User connected to API Server
+2020-08-12 00:45:52: [?] User connected to API Server
+2020-08-12 00:52:42: [?] User connected to API Server
