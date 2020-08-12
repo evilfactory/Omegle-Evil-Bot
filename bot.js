@@ -200,7 +200,7 @@ function ready() {
             try {
                 eval(fs.readFileSync(modeList[msg]) + '')
             } catch (e) {
-                logger.log("Script error while running script " + modeList[file], logger.logError)
+                logger.log("Script error while running script " + modeList[msg], logger.logError)
                 logger.log(e)
             }
 

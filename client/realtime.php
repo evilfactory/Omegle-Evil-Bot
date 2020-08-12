@@ -3,9 +3,9 @@
 
 <head>
     <title>Realtime Omegle Cleverbot</title>
-
-    <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 
     <meta charset="UTF-8">
 
@@ -33,6 +33,11 @@
             border-width: 1px;
         }
 
+        #msgcontainer a {
+            color: white;
+
+        }
+
         form {
             margin-top: 20px;
         }
@@ -55,7 +60,10 @@
 <body>
 
     <div id="msgcontainer">
-
+        <div>
+            <span class='good badge badge-primary'></span> 
+            <span class='good chat_text'><a href="database_explorer.php">Go back</a></span>
+        </div>
     </div>
 
     <script type="text/javascript" src="script.js"></script>

@@ -3,8 +3,6 @@ logger.log("Loading cleverbot.js script!", logger.logInfo)
 const superagent = require("superagent");
 const md5 = require("md5");
 
-var database = []
-
 var cookies;
 
 // FROM https://github.com/IntriguingTiles/cleverbot-free
@@ -38,6 +36,8 @@ var cleverbot = async (stimulus, context = []) => {
     return decodeURIComponent(req.header["cboutput"]);
 };
 
+database = []
+
 function loadDatabase(callback) {
     fs.readFile('./data/database.json', 'utf8', function (err, data) {
         if (err) {
@@ -45,7 +45,7 @@ function loadDatabase(callback) {
         }
         database = JSON.parse(data)
 
-        callback()
+        if(callback){callback()}
     });
 }
 
@@ -69,11 +69,13 @@ function pushMessageToDatabase(name, msg) {
     saveDatabase()
 }
 
+
 function filterText(text) {
-    return text.replace(/[^\x00-\x7F]/g, "")
+    //return text.replace(/[^\x00-\x7F]/g, "")
+    return text
 }
 
-var APIServerMessageList = []
+var APIServerMessageList = [{name: "SERVER", msg: "😅"}]
 
 function sendToAPIServer(name, msg) {
     if (!apiserverIO) { return }
