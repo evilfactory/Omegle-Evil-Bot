@@ -238,6 +238,11 @@ consoleInputManager.on(function (msg) {
         }
     }
 
+    if(command == "lang"){
+        logger.log("Language set to "+joinArg, logger.logInfo)
+        stranger.om.language = joinArg
+    }
+
     if (command == "question") {
         if (joinArg == "0") {
             question = false
@@ -268,6 +273,7 @@ loadDatabase(function () {
         "'question 0/1' to question cleverbot responses\n" +
         "'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)\n" +
         "'apiserver' starts api server\n" +
+        "'lang language' sets language\n" +
         "'cleverbot 0/1' to disable/enable cleverbot", logger.logInfo)
 
     ready = true

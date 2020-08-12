@@ -3238,3 +3238,50 @@ BOT RESTART
 2020-08-12 00:45:49: [?] User connected to API Server
 2020-08-12 00:45:52: [?] User connected to API Server
 2020-08-12 00:52:42: [?] User connected to API Server
+ 
+BOT RESTART
+
+2020-08-12 02:39:46: [?] Loading avaiable scripts...
+2020-08-12 02:39:46: [?] Choose the script that you want use: 
+2020-08-12 02:39:46:  0) modes/cleverbot.js
+2020-08-12 02:39:46:  1) modes/mitm.js
+2020-08-12 02:39:48: [?] Loading cleverbot.js script!
+2020-08-12 02:39:48: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+ 
+BOT RESTART
+
+2020-08-12 02:40:11: [?] Loading avaiable scripts...
+2020-08-12 02:40:11: [?] Choose the script that you want use: 
+2020-08-12 02:40:11:  0) modes/cleverbot.js
+2020-08-12 02:40:11:  1) modes/mitm.js
+2020-08-12 02:40:12: [?] Loading cleverbot.js script!
+2020-08-12 02:40:12: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'cleverbot 0/1' to disable/enable cleverbot
+ 
+BOT RESTART
+
+2020-08-12 02:40:52: [?] Loading avaiable scripts...
+2020-08-12 02:40:52: [?] Choose the script that you want use: 
+2020-08-12 02:40:52:  0) modes/cleverbot.js
+2020-08-12 02:40:52:  1) modes/mitm.js
+2020-08-12 02:41:08: [?] Loading cleverbot.js script!
+2020-08-12 02:41:08: [?] Type 'find' to connect a stranger
+'say text' to send something to the stranger
+'autoconnect 0/1' to connect automatically
+'question 0/1' to question cleverbot responses
+'autoquit number' disconnect from stranger when he is afk(set to -1 to disable)
+'apiserver' starts api server
+'lang language' sets language
+'cleverbot 0/1' to disable/enable cleverbot
+2020-08-12 02:41:10: [?] Language set to pt
