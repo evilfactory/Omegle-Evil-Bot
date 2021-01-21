@@ -16,7 +16,7 @@
     "md5": "^2.3.0",
     "omegle-node": "^1.1.4",
     "query-string": "^6.13.1",
-    "socket.io": "^2.3.0",
+    "socket.io": "^2.4.0",
     "superagent": "^5.3.1"
   }
 }
